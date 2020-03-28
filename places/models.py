@@ -10,8 +10,8 @@ class Category(models.Model):
     
     
     title = models.CharField(max_length=200)
-    description = models.CharField(max_length=200)
-    keywords = models.CharField(max_length=200)
+    description = models.CharField(max_length=200, blank='True')
+    keywords = models.CharField(max_length=200, blank='True')
     status = models.CharField(max_length=10, choices=STATUS)
     image = models.ImageField(blank='True', upload_to='images/')
     slug = models.SlugField()

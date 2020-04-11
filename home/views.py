@@ -1,8 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the home.")
+    return render(request, 'index.html')
 
 
 def fonksiyon(request):
-    return HttpResponse("Hello, world. You're at the deneme.")
+    return render(request, 'index.html')

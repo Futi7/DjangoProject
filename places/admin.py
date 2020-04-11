@@ -13,16 +13,20 @@ class PlacesImageInLine(admin.TabularInline):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['title', 'status']
+    list_display = ['title', 'image_tag', 'status']
+    readonly_fields = ('image_tag',)
     list_filter = ['status']
 
 class PlacesAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'price', 'status']
+    list_display = ['title', 'category', 'price', 'image_tag', 'status']
+    readonly_fields = ('image_tag',)
     list_filter = ['status', 'category', 'price']
     inlines = [PlacesImageInLine]
 
+
 class ImagesAdmin(admin.ModelAdmin):
-    list_display = ['title', 'place']
+    list_display = ['title', 'place', 'image_tag']
+    readonly_fields = ('image_tag',)
 
 
 admin.site.register(Category, CategoryAdmin)

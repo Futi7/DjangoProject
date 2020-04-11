@@ -47,3 +47,17 @@ class Places(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+class Images(models.Model):
+    place = models.ForeignKey(Places, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    image = models.ImageField(blank='True', upload_to='images/')
+
+
+
+
+
+

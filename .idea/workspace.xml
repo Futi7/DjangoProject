@@ -2,312 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d6ed4a9-7865-4007-8316-0b11c589aa73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/elements.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/about_image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/city_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/contact.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/elements.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/footer_latest_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/footer_latest_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/footer_latest_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/home_slider_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/icon_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/icon_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/icon_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/icon_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/icon_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/icon_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/intro_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/latest_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/latest_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/latest_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/latest_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/logo_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/milestones_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/milestones_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/milestones_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/milestones_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/news.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/news_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/news_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/news_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/newsletter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/properties.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/property_9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/realtor_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/realtor_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/realtor_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/realtor_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/room_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/room_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/room_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/room_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/room_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/sidebar_realtor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/testimonial_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/testimonial_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/images/testimonial_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/elements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/properties.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/js/property.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/OwlCarousel2-2.2.1/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/OwlCarousel2-2.2.1/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/OwlCarousel2-2.2.1/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/OwlCarousel2-2.2.1/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/OwlCarousel2-2.2.1/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/easing/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/greensock/ScrollToPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/greensock/TimelineMax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/greensock/TweenMax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/greensock/animation.gsap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/jquery-circle-progress-1.2.2/circle-progress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/parallax-js-master/parallax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/progressbar/progressbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/rangeslider.js-2.3.0/rangeslider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/rangeslider.js-2.3.0/rangeslider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/plugins/scrollmagic/ScrollMagic.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/properties.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/property.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/about.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/about_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/bootstrap4/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/bootstrap4/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/bootstrap4/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/contact_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/elements.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/elements_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/main_styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/news.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/news_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/properties.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/properties_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/property.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/property_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEMPS/bluesky/styles/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/about_image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/city_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/contact.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/elements.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/footer_latest_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/footer_latest_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/footer_latest_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/home_slider_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/icon_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/icon_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/icon_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/icon_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/icon_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/icon_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/intro_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/latest_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/latest_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/latest_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/latest_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/logo_large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/milestones_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/milestones_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/milestones_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/milestones_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/news.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/news_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/news_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/news_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/newsletter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/properties.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/property_9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/realtor_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/realtor_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/realtor_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/realtor_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/room_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/room_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/room_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/room_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/room_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/sidebar_realtor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/testimonial_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/testimonial_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/testimonial_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/elements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/properties.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/js/property.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/easing/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/greensock/ScrollToPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/greensock/TimelineMax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/greensock/TweenMax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/greensock/animation.gsap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/jquery-circle-progress-1.2.2/circle-progress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/parallax-js-master/parallax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/progressbar/progressbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/rangeslider.js-2.3.0/rangeslider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/rangeslider.js-2.3.0/rangeslider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/plugins/scrollmagic/ScrollMagic.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/about.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/about_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/bootstrap4/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/bootstrap4/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/bootstrap4/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/contact_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/elements.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/elements_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/main_styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/news.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/news_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/properties.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/properties_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/property.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/property_responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/styles/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/homebase.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Screenshot_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Screenshot_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Screenshot_1_vi1QWm1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Screenshot_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/vintage-1149558_1280_nNvx9dq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/places/migrations/0005_auto_20200411_2115.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/places/migrations/0006_remove_images_description.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -443,7 +143,7 @@
       <workItem from="1586443678733" duration="7058000" />
       <workItem from="1586618778177" duration="3727000" />
       <workItem from="1586624953030" duration="819000" />
-      <workItem from="1586626855236" duration="1551000" />
+      <workItem from="1586626855236" duration="2242000" />
     </task>
     <task id="LOCAL-00001" summary="End of the 2nd video">
       <created>1585407372071</created>
@@ -473,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585682390303</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="End of the 6th video">
+      <created>1586628576953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586628576953</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,6 +204,7 @@
     <MESSAGE value="End of the 2nd video" />
     <MESSAGE value="End of the 3rd video" />
     <MESSAGE value="End of the 4th video" />
-    <option name="LAST_COMMIT_MESSAGE" value="End of the 4th video" />
+    <MESSAGE value="End of the 6th video" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of the 6th video" />
   </component>
 </project>

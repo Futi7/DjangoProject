@@ -1,3 +1,5 @@
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 
@@ -23,8 +25,9 @@ class Setting(models.Model):
     facebook = models.CharField(max_length=20)
     twitter = models.CharField(max_length=20)
     instagram = models.CharField(max_length=20)
-    aboutus = models.TextField()
-    reference = models.TextField()
+    aboutus = RichTextUploadingField()
+    reference = RichTextUploadingField()
+    contact = RichTextUploadingField(blank='True')
     status = models.CharField(max_length=10, choices=STATUS)
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now_add=True)

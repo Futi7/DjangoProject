@@ -14,17 +14,16 @@
 <link rel="stylesheet" type="text/css" href="{% static "plugins/OwlCarousel2-2.2.1/owl.carousel.css" %} ">
 <link rel="stylesheet" type="text/css" href="{% static "plugins/OwlCarousel2-2.2.1/owl.theme.default.css" %} ">
 <link rel="stylesheet" type="text/css" href="{% static "plugins/OwlCarousel2-2.2.1/animate.css" %} ">
-<link rel="stylesheet" type="text/css" href="{% static "styles/main_styles.css" %} ">
-<link rel="stylesheet" type="text/css" href="{% static "styles/responsive.css" %} ">
+{% block head %} {% endblock %}
 <link rel="icon" href="{{ setting.icon.url }}" type="image/gif" sizes="16x16">
 
-    {% block head %} {% endblock %}
+
 </head>
 <body>
-    {% include 'header.html' %}
-    {% block menu %} {% endblock %}
-    {% block home %} {% endblock %}
-    {% include 'footer.html' %}
-    {% block footer %} {% endblock %}
+        {% block header %}{% include 'header.html' %}{% endblock %}
+        {% block menu %}{% include 'menu.html' %}{% endblock %}
+        {% block body %} {% endblock %}
+        {% block footer %}{% include 'footer.html' %}{% endblock %}
+        {% block javascript %}{% include 'javascript.html' %}{% endblock %}
 </body>
 </html>

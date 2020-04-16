@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.safestring import mark_safe
-
+from ckeditor.fields import RichTextField
 
 class Category(models.Model):
     STATUS = (
@@ -38,7 +38,7 @@ class Places(models.Model):
 
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200, blank='True')
-    details = models.TextField()
+    details = RichTextField()
     keywords = models.CharField(max_length=200, blank='True')
     status = models.CharField(max_length=10, choices=STATUS)
     image = models.ImageField(blank='True', upload_to='images/')

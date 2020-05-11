@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d6ed4a9-7865-4007-8316-0b11c589aa73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/migrations/0002_auto_20200412_2216.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/places/migrations/0007_auto_20200412_2216.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/aboutus.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/javascript.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/references.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/0003_auto_20200511_0153.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/0004_auto_20200511_0235.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/bluesky/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/bluesky/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/styles/main_styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +159,8 @@
       <workItem from="1586624953030" duration="819000" />
       <workItem from="1586626855236" duration="6803000" />
       <workItem from="1586716263794" duration="3397000" />
-      <workItem from="1586982773126" duration="7131000" />
+      <workItem from="1586982773126" duration="7568000" />
+      <workItem from="1589135086422" duration="10002000" />
     </task>
     <task id="LOCAL-00001" summary="End of the 2nd video">
       <created>1585407372071</created>
@@ -228,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586633832881</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="End of the 12th video">
+      <created>1587001991692</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587001991692</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +253,7 @@
     <MESSAGE value="End of the 7th video" />
     <MESSAGE value="End of the 8th video" />
     <MESSAGE value="End of the 9th video" />
-    <option name="LAST_COMMIT_MESSAGE" value="End of the 9th video" />
+    <MESSAGE value="End of the 12th video" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of the 12th video" />
   </component>
 </project>

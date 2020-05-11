@@ -13,6 +13,17 @@
 {% block body %}
     <div class="contact">
 		<div class="container">
+
+            {%  if messages %}
+                {% for message in messages %}
+                    <div class="row">
+                        <div class="col-lg-12 alert alert-{{ message.tags }}" role="alert">
+                            {{ message }}
+                        </div>
+
+                    </div>
+                {% endfor %}
+            {% endif %}
 			<div class="row">
 
 				<!-- Contact Info -->
@@ -26,21 +37,30 @@
 				<!-- Contact Form -->
 				<div class="col-lg-8">
 					<div class="contact_form_container">
-						<form action="#" class="contact_form" id="contact_form">
+
+						<form action="" class="contact_form" method="post">
+                            {% csrf_token %}
+
 							<div class="row">
 								<!-- Name -->
 								<div class="col-lg-6 contact_name_col">
-									<input type="text" class="contact_input" placeholder="Name" required="required">
+									{{ form.name }}
 								</div>
 								<!-- Email -->
 								<div class="col-lg-6">
-									<input type="email" class="contact_input" placeholder="E-mail" required="required">
+									{{ form.email }}
 								</div>
 							</div>
-							<div><input type="text" class="contact_input" placeholder="Subject"></div>
-							<div><textarea class="contact_textarea contact_input" placeholder="Message" required="required"></textarea></div>
-							<button class="contact_button button">send</button>
+							<div>{{ form.subject }}</div>
+							<div>{{ form.message }}</div>
+							<input type="submit" class="contact_button button"></input>
+
+
+
 						</form>
+
+
+
 					</div>
 				</div>
 			</div>

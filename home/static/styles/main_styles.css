@@ -1365,3 +1365,9 @@ section
 	font-weight: 600;
 }
 
+.banner{
+	color: white !important;
+}
+.banner:hover{
+	color: #007bff !important;
+}

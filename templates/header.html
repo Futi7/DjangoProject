@@ -10,21 +10,55 @@
 						</div>
 						<nav class="main_nav">
 							<ul>
+                                {% if page == 'home' %}
 								<li class="active"><a href="/">Home</a></li>
 								<li><a href="/aboutus">About us</a></li>
-								<li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </li>
-                                    <li><a href="/references">References</a></li>
+                                <li><a href="/properties">Properties</a></li>
+								<li><a href="/references">References</a></li>
 								<li><a href="/contact">Contact</a></li>
+
+                                {% elif page == 'about' %}
+                                <li><a href="/">Home</a></li>
+								<li class="active"><a href="/aboutus">About us</a></li>
+                                <li><a href="/properties">Properties</a></li>
+								<li><a href="/references">References</a></li>
+								<li><a href="/contact">Contact</a></li>
+
+                                {% elif page == 'reference' %}
+                                <li><a href="/">Home</a></li>
+								<li><a href="/aboutus">About us</a></li>
+                                <li><a href="/properties">Properties</a></li>
+								<li class="active"><a href="/references">References</a></li>
+								<li><a href="/contact">Contact</a></li>
+
+                                {% elif page == 'prop' %}
+                                <li><a href="/">Home</a></li>
+								<li><a href="/aboutus">About us</a></li>
+                                <li class="active"><a href="/properties">Properties</a></li>
+								<li><a href="/references">References</a></li>
+								<li><a href="/contact">Contact</a></li>
+
+                                {% elif page == 'contact' %}
+                                <li><a href="/">Home</a></li>
+								<li><a href="/aboutus">About us</a></li>
+                                <li><a href="/properties">Properties</a></li>
+								<li><a href="/references">References</a></li>
+								<li class="active"><a href="/contact">Contact</a></li>
+
+                                {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
 							</ul>
 						</nav>
 						<div class="phone_num ml-auto">

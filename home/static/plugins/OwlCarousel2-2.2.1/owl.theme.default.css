@@ -8,11 +8,11 @@
  */
 .owl-theme .owl-nav
 {
-    margin-top: 10px;
+    margin-top: -75px !important;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
     z-index: 10000;
-    background: red;
+    background: transparent;
 }
 .owl-theme .owl-nav [class*='owl-']
 {
@@ -39,7 +39,7 @@
 
 .owl-theme .owl-nav.disabled + .owl-dots
 {
-    margin-top: 10px;
+    margin-top: -5px;
 }
 
 .owl-theme .owl-dots

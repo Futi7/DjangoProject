@@ -2839,7 +2839,7 @@
 
 		// create DOM structure for relative navigation
 		this._controls.$relative = (settings.navContainer ? $(settings.navContainer)
-			: $('<div>').addClass(settings.navContainerClass).appendTo(this.$element)).addClass('disabled');
+			: $('<div>').addClass(settings.navContainerClass).appendTo(this.$element)).addClass('anyClass');
 
 		this._controls.$previous = $('<' + settings.navElement + '>')
 			.addClass(settings.navClass[0])
@@ -2865,7 +2865,7 @@
 		}
 
 		this._controls.$absolute = (settings.dotsContainer ? $(settings.dotsContainer)
-			: $('<div>').addClass(settings.dotsClass).appendTo(this.$element)).addClass('disabled');
+			: $('<div>').addClass(settings.dotsClass).appendTo(this.$element)).addClass('anyClass');
 
 		this._controls.$absolute.on('click', 'div', $.proxy(function(e) {
 			var index = $(e.target).parent().is(this._controls.$absolute)

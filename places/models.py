@@ -39,6 +39,7 @@ class Places(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200, blank='True')
     details = RichTextField()
+    slug = models.SlugField(blank='True', max_length=150)
     keywords = models.CharField(max_length=200, blank='True')
     status = models.CharField(max_length=10, choices=STATUS)
     image = models.ImageField(blank='True', upload_to='images/')

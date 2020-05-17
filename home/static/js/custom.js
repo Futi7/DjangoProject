@@ -133,12 +133,12 @@ $(document).ready(function()
 			homeSlider.owlCarousel(
 			{
 				items:1,
-				autoplay:false,
+				autoplay:true,
 				loop:true,
 				smartSpeed:1200,
-				nav:false,
-				dots:false,
-				mouseDrag:false
+				nav:true,
+				dots:true,
+				mouseDrag:true
 			});
 		}
 	}

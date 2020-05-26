@@ -3,26 +3,32 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from home.models import Setting, ContactFormu, ContactFormMessage
-from places.models import Places
+from places.models import Places, Category
 
 
 def index(request):
     setting = Setting.objects.get(pk=1)
     sliderData = Places.objects.all()[0:5]
-    context = {'setting': setting, 'page': 'home', 'sliderData': sliderData}
+    lastData = Places.objects.all().order_by('-id')[:3]
+    categories = Category.objects.all()
+    context = {'setting': setting, 'page': 'home', 'sliderData': sliderData, 'categories': categories, 'lastData':lastData}
 
     return render(request, 'index.html', context)
 
 
 def aboutus(request):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'about'}
+    context = {'setting': setting, 'page': 'about', 'categories': categories, 'lastData':lastData}
 
     return render(request, 'aboutus.html', context)
 
 def reference(request):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'reference'}
+    context = {'setting': setting, 'page': 'reference', 'categories': categories, 'lastData':lastData}
 
     return render(request, 'references.html', context)
 
@@ -41,12 +47,34 @@ def contact(request):
             messages.success(request, "Mesajınız başarıyla gönderilmiştir")
             return HttpResponseRedirect('/contact')
 
-
-
-
-
+    lastData = Places.objects.all().order_by('-id')[:3]
+    categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
     form = ContactFormu()
-    context = {'setting': setting, 'form': form, 'page': 'contact'}
+    context = {'setting': setting, 'form': form, 'page': 'contact', 'categories': categories,'lastData':lastData}
 
     return render(request, 'contact.html', context)
+
+
+
+
+def category_products(request, id, slug):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    categories = Category.objects.all()
+    categoriesData = Category.objects.get(pk=id)
+    products = Places.objects.filter(category_id=id)
+    count = Places.objects.filter(category_id = id).count()
+    context = {'products': products, 'categories':categories,'page': 'prop', 'count':count, 'catData':categoriesData, 'lastData':lastData}
+    return render(request, 'places.html', context)
+
+
+
+
+
+def product_detail(request, id, slug):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    categories = Category.objects.all()
+
+    product = Places.objects.filter(pk=id)
+    context = {'product': product, 'categories':categories,'page': 'prop',  'lastData':lastData}
+    return render(request, 'places.html', context)

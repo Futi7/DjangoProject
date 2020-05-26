@@ -2,22 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d6ed4a9-7865-4007-8316-0b11c589aa73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/static/images/business.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/different-currencies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/seo-and-web.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/places/migrations/0008_places_slug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/js/bootstrap-4-hover-navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/styles/bootstrap-4-hover-navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/places/migrations/0009_auto_20200519_1222.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/places.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/1-0ZT6_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/960x540.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ALANYAKALESI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/AYASOFYA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Mount-Everest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/NASA-2020-trip-300x168.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/SP_23332584-4d25-4b0f-ba0e-f84ecfdc5683.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/SP_3819d4ac-55f2-4435-b618-a3f6625e5234.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/SP_69603b8f-33a2-49b8-8556-4f65c241cbf6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/SP_88b4643b-5993-44c9-9a61-f5e8a6c9689c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/SP_88e0ad32-56f1-4c8c-a2a7-e149d2a3a04d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Screenshot_23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Screenshot_25_El88z71.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ays1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ays2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ays3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/download_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/download_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/download_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/download_PsBoO0l.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/download_UD58Rcz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/dsc5482-h8qN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/dsc5549-VF5d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/images.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/static/styles/bootstrap4/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/styles/bootstrap4/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/static/styles/bootstrap4/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/styles/bootstrap4/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/styles/main_styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/places/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homebase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/javascript.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/javascript.html" afterDir="false" />
     </list>
@@ -59,7 +84,7 @@
         <item name="db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="home_setting: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="places_category: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -87,18 +112,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\uploads" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\js" />
+      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\styles" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\images" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\places" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\uploads" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -143,7 +170,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b43ca135" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b43ca135" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@110f1d59" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -174,7 +211,15 @@
       <workItem from="1589399798278" duration="3196000" />
       <workItem from="1589408646556" duration="953000" />
       <workItem from="1589426165900" duration="6342000" />
-      <workItem from="1589697699174" duration="3893000" />
+      <workItem from="1589697699174" duration="5936000" />
+      <workItem from="1589877925527" duration="2042000" />
+      <workItem from="1589933862753" duration="16578000" />
+      <workItem from="1590133651221" duration="1159000" />
+      <workItem from="1590238422062" duration="677000" />
+      <workItem from="1590240374882" duration="9256000" />
+      <workItem from="1590332308971" duration="3158000" />
+      <workItem from="1590415101138" duration="6889000" />
+      <workItem from="1590492552326" duration="182000" />
     </task>
     <task id="LOCAL-00001" summary="End of the 2nd video">
       <created>1585407372071</created>
@@ -253,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589155627625</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="End of the 14th video">
+      <created>1589703856765</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589703856777</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +335,7 @@
     <MESSAGE value="End of the 9th video" />
     <MESSAGE value="End of the 12th video" />
     <MESSAGE value="End of the 13th video" />
-    <option name="LAST_COMMIT_MESSAGE" value="End of the 13th video" />
+    <MESSAGE value="End of the 14th video" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of the 14th video" />
   </component>
 </project>

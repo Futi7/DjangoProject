@@ -44,7 +44,7 @@
 												</li>
 											</ul>
 										</div>
-										<div class="home_price">$  {{slide.price}}</div>
+										<div class="home_price">{% if slide.price != 0.0 %}$ {{ slide.price }}{% else %} Ücretsiz {% endif %}</div>
 									</div>
 								</div>
 							</div>
@@ -54,8 +54,7 @@
                 {% endfor %}
 
 
-            <div class="owl-nav "><div class="owl-prev">prev</div><div class="owl-next">next</div></div>
-            <div class="owl-dots "><div class="owl-dot active"><span></span></div></div>
+
 
 			</div>
 		</div>
@@ -150,12 +149,12 @@
 								<div class="recent_item">
 									<div class="recent_item_inner">
 										<div class="recent_item_image">
-											<img src="uploads/{{ slide.image }}" alt="">
-											<div class="tag_featured property_tag"><a href="#">Featured</a></div>
+											<img src="uploads/{{ slide.image }}" height="261px" width="361px" alt="">
+											<div class="tag_featured property_tag"><a href="#">{{ slide.category }}</a></div>
 										</div>
 										<div class="recent_item_body text-center">
-											<div class="recent_item_location">Miami</div>
-											<div class="recent_item_title"><a href="property.html">{{ slide.description }}</a></div>
+											<div class="recent_item_location">{{ slide.country }}</div>
+											<div class="recent_item_title"><a href="/place/{{ slide.id }}/{{ slide.slug }}">{{ slide.title }}</a></div>
 											<div class="recent_item_price">$ {{ slide.price }}</div>
 										</div>
 										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
@@ -196,93 +195,20 @@
 
 		<div class="cities_container d-flex flex-row flex-wrap align-items-start justify-content-between">
 
-			<!-- City -->
-			<div class="city">
-				<img src="{% static "images/city_1.jpg" %}" alt="https://unsplash.com/@dnevozhai">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>
-				</div>
-			</div>
 
+            {% for cat in categories %}
 			<!-- City -->
 			<div class="city">
-				<img src="{% static "images/city_2.jpg" %}" alt="https://unsplash.com/@lachlanjdempsey">
+				<img src="/uploads/{{ cat.image }}" height="217px" width="292px" alt="https://unsplash.com/@dnevozhai">
 				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
+					<a href="/category/{{ cat.id }}/{{ cat.slug }}" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">{{ cat.title }}</div>
+						<div class="city_subtitle">{{cat.description}}</div>
 					</a>
 				</div>
 			</div>
+                {% endfor %}
 
-			<!-- City -->
-			<div class="city">
-				<img src="{% static "images/city_3.jpg" %}" alt="https://unsplash.com/@hellolightbulb">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>
-				</div>
-			</div>
-
-			<!-- City -->
-			<div class="city">
-				<img src="{% static "images/city_4.jpg" %}" alt="https://unsplash.com/@justinbissonbeck">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>
-				</div>
-			</div>
-
-			<!-- City -->
-			<div class="city">
-				<img src="{% static "images/city_5.jpg" %}" alt="https://unsplash.com/@claudiotrigueros">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>
-				</div>
-			</div>
-
-			<!-- City -->
-			<div class="city">
-				<img src="{% static "images/city_6.jpg" %}" alt="https://unsplash.com/@andersjilden">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>
-				</div>
-			</div>
-
-			<!-- City -->
-			<div class="city">
-				<img src="{% static "images/city_7.jpg" %}" alt="https://unsplash.com/@sawyerbengtson">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>
-				</div>
-			</div>
-
-			<!-- City -->
-			<div class="city">
-				<img src="{% static "images/city_8.jpg" %}" alt="https://unsplash.com/@mathewwaters">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>
-				</div>
-			</div>
 		</div>
 	</div>
 
@@ -320,7 +246,7 @@
 					</div>
 				</div>
 
-				<!-- Testimonial Item -->
+				<!-- Testimonial Item 86x86 -->
 				<div class="col-lg-4 testimonial_col">
 					<div class="testimonial">
 						<div class="testimonial_title">Very good communication</div>

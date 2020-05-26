@@ -8,45 +8,194 @@
 						<div class="logo">
 							<a href="#"><img src="{% static "images/logo.png" %}" alt=""></a>
 						</div>
-						<nav class="main_nav">
-							<ul>
-                                {% if page == 'home' %}
-								<li class="active"><a href="/">Home</a></li>
-								<li><a href="/aboutus">About us</a></li>
-                                <li><a href="/properties">Properties</a></li>
-								<li><a href="/references">References</a></li>
-								<li><a href="/contact">Contact</a></li>
 
-                                {% elif page == 'about' %}
-                                <li><a href="/">Home</a></li>
-								<li class="active"><a href="/aboutus">About us</a></li>
-                                <li><a href="/properties">Properties</a></li>
-								<li><a href="/references">References</a></li>
-								<li><a href="/contact">Contact</a></li>
+                    <nav class="navbar navbar-expand-md navbar-light btco-hover-menu">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+
+
+                        {% if page == 'home' %}
+
+                        <li class="nav-item active">
+                            <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus">About Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  role="button" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink"  aria-haspopup="true" aria-expanded="false">
+                                Places
+                            </a>
+                            {% load mptt_tags %}
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                {% recursetree categories %}
+                                    <li>
+
+                                    {% if not node.is_leaf_node %}
+                                    <a class="dropdown-item dropdown-toggle" role="button" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    {% else %}
+                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    {% endif %}
+
+                                {% if not node.is_leaf_node %}
+                                    <ul class="dropdown-menu">
+                                        {{ children }}
+                                    </ul>
+                                {% endif %}
+
+                                    </li>
+                                {% endrecursetree %}
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/references">References</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
+
+
+
+                        {% elif page == 'about' %}
+                                    <li class="nav-item">
+                                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/aboutus">About Us</a>
+                            </li>
+
+
+                                 <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Places
+                                </a>
+                                {% load mptt_tags %}
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    {% recursetree categories %}
+                                        <li>
+
+                                        {% if not node.is_leaf_node %}
+                                        <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                        {% else %}
+                                        <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                        {% endif %}
+
+                                    {% if not node.is_leaf_node %}
+                                        <ul class="dropdown-menu">
+                                            {{ children }}
+                                        </ul>
+                                    {% endif %}
+
+                                        </li>
+                                    {% endrecursetree %}
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/references">References</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact Us</a>
+                            </li>
+
 
                                 {% elif page == 'reference' %}
                                 <li><a href="/">Home</a></li>
 								<li><a href="/aboutus">About us</a></li>
-                                <li><a href="/properties">Properties</a></li>
-								<li class="active"><a href="/references">References</a></li>
-								<li><a href="/contact">Contact</a></li>
 
-                                {% elif page == 'prop' %}
-                                <li><a href="/">Home</a></li>
-								<li><a href="/aboutus">About us</a></li>
-                                <li class="active"><a href="/properties">Properties</a></li>
-								<li><a href="/references">References</a></li>
-								<li><a href="/contact">Contact</a></li>
 
-                                {% elif page == 'contact' %}
-                                <li><a href="/">Home</a></li>
-								<li><a href="/aboutus">About us</a></li>
-                                <li><a href="/properties">Properties</a></li>
-								<li><a href="/references">References</a></li>
-								<li class="active"><a href="/contact">Contact</a></li>
+                                 <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Places
+                            </a>
+                            {% load mptt_tags %}
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                {% recursetree categories %}
+                                    <li>
 
+                                    {% if not node.is_leaf_node %}
+                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    {% else %}
+                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    {% endif %}
+
+                                {% if not node.is_leaf_node %}
+                                    <ul class="dropdown-menu">
+                                        {{ children }}
+                                    </ul>
                                 {% endif %}
 
+                                    </li>
+                                {% endrecursetree %}
+                            </ul>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/references">References</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
+                            
+
+
+
+                            
+
+
+
+
+
+
+                                {% elif page == 'prop' %}
+                                <li class="nav-item">
+                                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/aboutus">About Us</a>
+                            </li>
+                                 <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Places
+                            </a>
+                            {% load mptt_tags %}
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                {% recursetree categories %}
+                                    <li>
+
+                                    {% if not node.is_leaf_node %}
+                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}asd</a>
+                                    {% else %}
+                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    {% endif %}
+
+                                {% if not node.is_leaf_node %}
+                                    <ul class="dropdown-menu">
+                                        {{ children }}
+                                    </ul>
+                                {% endif %}
+
+                                    </li>
+                                {% endrecursetree %}
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/references">References</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
 
 
 
@@ -54,13 +203,60 @@
 
 
 
+                                {% elif page == 'contact' %}
+                            <li class="nav-item">
+                                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/aboutus">About Us</a>
+                            </li>
+                                 <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Places
+                            </a>
+                            {% load mptt_tags %}
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                {% recursetree categories %}
+                                    <li>
+
+                                    {% if not node.is_leaf_node %}
+                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    {% else %}
+                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    {% endif %}
+
+                                {% if not node.is_leaf_node %}
+                                    <ul class="dropdown-menu">
+                                        {{ children }}
+                                    </ul>
+                                {% endif %}
+
+                                    </li>
+                                {% endrecursetree %}
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/references">References</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
 
 
 
 
 
-							</ul>
-						</nav>
+
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </nav>
+
+
+                    
 						<div class="phone_num ml-auto">
 							<div class="phone_num_inner">
 								<img src="{% static "images/phone.png" %}" alt=""><span>652-345 3222 11</span>

@@ -1,7 +1,7 @@
 {% extends 'homebase.html' %}
-{% block title %} {{ product.title }} Places{% endblock %}
-{% block keywords %} {{ product.keywords }}{% endblock %}
-{% block description %} {{ product.description }}{% endblock %}
+{% block title %} {{ place.title }} Places{% endblock %}
+{% block keywords %} {{ place.keywords }}{% endblock %}
+{% block description %} {{ place.description }}{% endblock %}
 
 {% load static %}
 {% block head %}
@@ -20,7 +20,7 @@
                 <div class="col">
                     <div class="intro_content d-flex flex-lg-row flex-column align-items-start justify-content-start">
                         <div class="intro_title_container">
-                            <div class="intro_title">{{ product.title }}</div>
+                            <div class="intro_title">{{ place.title }}</div>
                             <div class="intro_tags">
                                 <ul>
                                     {% for key in keywords %}
@@ -31,7 +31,7 @@
                         </div>
                         <div class="intro_price_container ml-lg-auto d-flex flex-column align-items-start justify-content-center">
                             <div>Entrance Fee</div>
-                            <div class="intro_price">{% if product.price != 0.0 %}$ {{ product.price }}{% else %}
+                            <div class="intro_price">{% if place.price != 0.0 %}$ {{ place.price }}{% else %}
                                 Ücretsiz {% endif %}</div>
                         </div>
                     </div>
@@ -43,8 +43,8 @@
             <!-- Intro Slider -->
             <div class="owl-carousel owl-theme intro_slider">
                 <!-- Slide -->
-            <div class="owl-item"><img src="{{ product.image.url }}" height="562px" width="1255px"
-                                               alt="{{ product.image.title }}"></div>
+            <div class="owl-item"><img src="{{ place.image.url }}" height="562px" width="1255px"
+                                               alt="{{ place.image.title }}"></div>
                 {% for img in images %}
                     <div class="owl-item"><img src="{{ img.image.url }}" height="562px" width="1255px"
                                                alt="{{ img.image.title }}"></div>
@@ -182,7 +182,7 @@
                                     <div class="property_room_content d-flex flex-row align-items-center justify-content-start">
                                         <div class="room_icon"><img src="{% static "images/pin.png" %}" height="32px"
                                                                     width="32px" alt=""></div>
-                                        <div class="room_num">{{ product.country }}</div>
+                                        <div class="room_num">{{ place.country }}</div>
                                     </div>
                                 </div>
 
@@ -192,7 +192,7 @@
                                     <div class="property_room_content d-flex flex-row align-items-center justify-content-start">
                                         <div class="room_icon"><img
                                                 src="{% static "images/different-currencies-grey.png" %}" alt=""></div>
-                                        <div class="room_num">{{ product.price }}</div>
+                                        <div class="room_num">{{ place.price }}</div>
                                     </div>
                                 </div>
 
@@ -201,7 +201,7 @@
                                     <div class="property_room_title">Audience</div>
                                     <div class="property_room_content d-flex flex-row align-items-center justify-content-start">
                                         <div class="room_icon"><img src="{% static "images/target.png" %}" alt=""></div>
-                                        <div class="room_num">{{ product.audience }}</div>
+                                        <div class="room_num">{{ place.audience }}</div>
                                     </div>
                                 </div>
 
@@ -214,7 +214,7 @@
                         <div class="property_description">
                             <div class="property_title">Description</div>
                             <div class="property_text property_text_2">
-                                <p>{{ product.description }}</p>
+                                <p>{{ place.description }}</p>
                             </div>
                         </div>
 
@@ -224,7 +224,7 @@
                             <div class="property_title">Additional Details</div>
                             <div class="details_container">
                                 <p>
-                                    {{ product.details | safe }}
+                                    {{ place.details | safe }}
                                 </p>
                             </div>
                         </div>
@@ -258,7 +258,7 @@
                         <div class="property_title">Comments</div>
                         <div class="details_container">
                             {% if user.id is not None %}
-                                <form name="comment" action="/places/addcomment/{{ product.id }}" method="post"
+                                <form name="comment" action="/places/addcomment/{{ place.id }}" method="post"
                                       class="contact_form">
                                     {% csrf_token %}
                                     <div class="row">

@@ -27,7 +27,7 @@
 								<div class="col">
 									<div class="slide_content">
 										<div class="home_subtitle">{{ slide.category }}</div>
-                                        <div class="home_title"><a style="color: white" href="/product/{{ slide.id }}/{{ slide.slug }}">{{ slide.title }}</a></div>
+                                        <div class="home_title"><a style="color: white" href="/place/{{ slide.id }}/{{ slide.slug }}">{{ slide.title }}</a></div>
 										<div class="home_details">
 											<ul class="home_details_list d-flex flex-row align-items-center justify-content-start">
 												<li>
@@ -70,6 +70,7 @@
 					<div class="home_search_container">
 						<div class="home_search_content">
 							<form action="/search/" method="post" class="search_form d-flex flex-row align-items-start justfy-content-start">
+                                {% csrf_token %}
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
 									<input type="text" name="query" class="contact_input" placeholder="Search">
 								</div>

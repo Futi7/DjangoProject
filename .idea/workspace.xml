@@ -2,25 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d6ed4a9-7865-4007-8316-0b11c589aa73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/static/images/different-currencies-grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/pin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/target.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/places/migrations/0010_comment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/place.html" afterDir="false" />
+      <change afterPath="$USER_HOME$/Downloads/Proje/blog/migrations/0016_blog_user.py" afterDir="false" />
+      <change afterPath="$USER_HOME$/Downloads/Proje/home/migrations/0010_setting_youtube.py" afterDir="false" />
+      <change afterPath="$USER_HOME$/Downloads/Proje/home/static/img/gallery.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Downloads/Proje/uploads/images/IMG_8597_N1oh9Jv.JPG" afterDir="false" />
+      <change afterPath="$USER_HOME$/Downloads/Proje/uploads/images/WhatsApp_Image_2020-03-24_at_03.18.13_VPZreOE.jpeg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Downloads/Proje/user/templates/blogImage_gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/blog/models.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/blog/models.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/blog/views.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/blog/views.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/content/admin.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/content/admin.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/content/models.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/content/models.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/db.sqlite3" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/db.sqlite3" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/home/models.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/home/models.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/home/templates/blog_detail.html" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/home/templates/blog_detail.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/home/templates/faq.html" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/home/templates/faq.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/home/views.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/home/views.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/myproject/urls.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/myproject/urls.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/user/templates/user_addcontent.html" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/user/templates/user_addblog.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/user/templates/user_contents.html" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/user/templates/user_blogs.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/user/templates/user_panel.html" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/user/templates/user_panel.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/user/urls.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/user/urls.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/Proje/user/views.py" beforeDir="false" afterPath="$USER_HOME$/Downloads/Proje/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/djangoProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangoProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/styles/main_styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/javascript.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/javascript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/place.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/place.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/places.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/places.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,7 +100,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Proje" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -97,11 +108,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\images" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\templates" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\js" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\styles" />
-      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\places" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\uploads" />
@@ -200,7 +211,7 @@
       <workItem from="1590415101138" duration="6889000" />
       <workItem from="1590492552326" duration="8697000" />
       <workItem from="1590926242661" duration="5702000" />
-      <workItem from="1590940803563" duration="6072000" />
+      <workItem from="1590940803563" duration="7211000" />
     </task>
     <task id="LOCAL-00001" summary="End of the 2nd video">
       <created>1585407372071</created>
@@ -300,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590493569620</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="End of the 19th video">
+      <created>1590948501860</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1590948501860</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +350,7 @@
     <MESSAGE value="End of the 13th video" />
     <MESSAGE value="End of the 14th video" />
     <MESSAGE value="End of the 17th video" />
-    <option name="LAST_COMMIT_MESSAGE" value="End of the 17th video" />
+    <MESSAGE value="End of the 19th video" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of the 19th video" />
   </component>
 </project>

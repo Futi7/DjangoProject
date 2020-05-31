@@ -13,8 +13,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('aboutus/', views.aboutus, name='about'),
     path('reference/', views.reference, name='reference'),
-    path('category/<int:id>/<slug:slug>/', views.category_products, name='category'),
-    path('product/<int:id>/<slug:slug>/', views.product_detail, name='product'),
+    path('category/<int:id>/<slug:slug>/', views.category_places, name='category'),
+    path('place/<int:id>/<slug:slug>/', views.place_detail, name='place'),
     path('search/', views.place_search, name="place_search")
 ]
 

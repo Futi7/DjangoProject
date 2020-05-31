@@ -28,7 +28,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle"  role="button" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink"  aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle"  role="button" href="/places" id="navbarDropdownMenuLink"  aria-haspopup="true" aria-expanded="false">
                                 Places
                             </a>
                             {% load mptt_tags %}
@@ -37,7 +37,7 @@
                                     <li>
 
                                     {% if not node.is_leaf_node %}
-                                    <a class="dropdown-item dropdown-toggle" role="button" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                    <a class="dropdown-item dropdown-toggle" role="button"  href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                     {% else %}
                                     <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                     {% endif %}
@@ -73,7 +73,7 @@
 
 
                                  <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" role="button"  href="/places" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Places
                                 </a>
                                 {% load mptt_tags %}
@@ -113,7 +113,7 @@
 
 
                                  <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" role="button"  href="/places" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Places
                             </a>
                             {% load mptt_tags %}
@@ -164,7 +164,7 @@
                                 <a class="nav-link" href="/aboutus">About Us</a>
                             </li>
                                  <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active" href="/places" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Places
                             </a>
                             {% load mptt_tags %}
@@ -173,7 +173,7 @@
                                     <li>
 
                                     {% if not node.is_leaf_node %}
-                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}asd</a>
+                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                     {% else %}
                                     <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                     {% endif %}

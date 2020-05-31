@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d6ed4a9-7865-4007-8316-0b11c589aa73" name="Default Changelist" comment="" />
+    <list default="true" id="6d6ed4a9-7865-4007-8316-0b11c589aa73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/static/images/different-currencies-grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/images/pin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/images/target.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/places/migrations/0010_comment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/place.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/styles/main_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/javascript.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/javascript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/places.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/places.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,16 +89,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static/js" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Proje" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/templates/places.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\images" />
+      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\templates" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\js" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\styles" />
-      <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\home\static\images" />
       <recent name="C:\Users\Fuat Seven\PycharmProjects\djangoProject\places" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -175,7 +198,9 @@
       <workItem from="1590240374882" duration="9256000" />
       <workItem from="1590332308971" duration="3158000" />
       <workItem from="1590415101138" duration="6889000" />
-      <workItem from="1590492552326" duration="607000" />
+      <workItem from="1590492552326" duration="8697000" />
+      <workItem from="1590926242661" duration="5702000" />
+      <workItem from="1590940803563" duration="6072000" />
     </task>
     <task id="LOCAL-00001" summary="End of the 2nd video">
       <created>1585407372071</created>
@@ -268,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590493034948</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="End of the 17th video">
+      <created>1590493569620</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1590493569620</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

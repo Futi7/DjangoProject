@@ -14,6 +14,8 @@ urlpatterns = [
     path('aboutus/', views.aboutus, name='about'),
     path('reference/', views.reference, name='reference'),
     path('category/<int:id>/<slug:slug>/', views.category_products, name='category'),
+    path('product/<int:id>/<slug:slug>/', views.product_detail, name='product'),
+    path('search/', views.place_search, name="place_search")
 ]
 
 if settings.DEBUG:

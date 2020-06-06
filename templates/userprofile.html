@@ -1,0 +1,77 @@
+{% extends 'homebase.html' %}
+{% block title %} {{ profile.user_name }} Profile {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+
+{% load static %}
+{% block head %}
+       <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+    <link rel="stylesheet" type="text/css" href="{% static "styles/news.css" %} ">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/responsive.css" %} ">
+{% endblock %}
+
+{% block body %}
+<div class="home">
+    <div class="container-fluid" style="margin-top: 10%;">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar">
+                    {% include 'usermenu.html' %}
+                </div>
+            </div>
+            <div class="col-md-9">
+                    <h1>My Profile</h1>
+
+                    <table class="table">
+                        <tbody>
+
+                        <tr>
+                            <th>First Name</th>
+                            <td>{{ user.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td>{{ user.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Username</th>
+                            <td>{{ profile.user_name }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Email</th>
+                            <td>{{ user.email }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Phone</th>
+                            <td>{{ profile.phone }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Address</th>
+                            <td>{{ profile.address }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>City</th>
+                            <td>{{ profile.city }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Country</th>
+                            <td>{{ profile.country }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    Edit Profile:  <a href="/user/update" class="btn btn-info col-md-3"><i class="fa fa-user"></i></a>
+                    Change Password:  <a href="/user/password" class="btn btn-warning col-md-3"><i class="fa fa-key"></i></a>
+                </div>
+            </div>
+    </div>
+          </div>
+    <br><br><br><br><br>
+    <br><br><br><br>
+{% endblock %}

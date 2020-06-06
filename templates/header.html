@@ -1,270 +1,484 @@
 <div class="super_container">
     {% load static %}
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="logo">
-							<a href="#"><img src="{% static "images/logo.png" %}" alt=""></a>
-						</div>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo">
+                            <a href="/"><img src="{% static "images/logo.png" %}" alt=""></a>
+                        </div>
 
-                    <nav class="navbar navbar-expand-md navbar-light btco-hover-menu">
+                        <nav class="navbar navbar-expand-md navbar-light btco-hover-menu">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-
-
-                        {% if page == 'home' %}
-
-                        <li class="nav-item active">
-                            <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/aboutus">About Us</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle"  role="button" href="/places" id="navbarDropdownMenuLink"  aria-haspopup="true" aria-expanded="false">
-                                Places
-                            </a>
-                            {% load mptt_tags %}
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                {% recursetree categories %}
-                                    <li>
-
-                                    {% if not node.is_leaf_node %}
-                                    <a class="dropdown-item dropdown-toggle" role="button"  href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% else %}
-                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% endif %}
-
-                                {% if not node.is_leaf_node %}
-                                    <ul class="dropdown-menu">
-                                        {{ children }}
-                                    </ul>
-                                {% endif %}
-
-                                    </li>
-                                {% endrecursetree %}
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/references">References</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contact Us</a>
-                        </li>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
 
 
+                                    {% if page == 'home' %}
 
-                        {% elif page == 'about' %}
-                                    <li class="nav-item">
-                                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/aboutus">About Us</a>
-                            </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link " href="/">Home <span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                                                Places
+                                            </a>
+                                            {% load mptt_tags %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                {% recursetree categories %}
+                                                    <li>
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <a class="dropdown-item dropdown-toggle" role="button"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% else %}
+                                                            <a class="dropdown-item"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% endif %}
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <ul class="dropdown-menu">
+                                                                {{ children }}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/references">References</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
 
 
-                                 <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" role="button"  href="/places" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Places
-                                </a>
-                                {% load mptt_tags %}
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    {% recursetree categories %}
-                                        <li>
 
-                                        {% if not node.is_leaf_node %}
-                                        <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                        {% else %}
-                                        <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                        {% if user.id is not None %}
+
+                                            <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle"
+                                                                              href="/user/"><i style="color: #fff"
+                                                                                               class="fa fa-user"></i> {{ user.first_name }}
+                                            </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li>
+                                                        <a class="dropdown-item" href="">Comments</a>
+                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/logout/">Log Out</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>{% else %}
+                                            <li class="nav-item"><a class="nav-link" href="/login/"><i
+                                                    style="color: #fff" class="fa fa-sign-in-alt"></i> Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="/signup/"><i
+                                                    style="color: #fff" class="fa fa-sign-out-alt"></i> Sign Up</a></li>
                                         {% endif %}
 
-                                    {% if not node.is_leaf_node %}
-                                        <ul class="dropdown-menu">
-                                            {{ children }}
-                                        </ul>
-                                    {% endif %}
 
+
+
+                                    {% elif page == 'about' %}
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="/">Home <span
+                                                    class="sr-only">(current)</span></a>
                                         </li>
-                                    {% endrecursetree %}
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                        </li>
+
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">
+                                                Places
+                                            </a>
+                                            {% load mptt_tags %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                {% recursetree categories %}
+                                                    <li>
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <a class="dropdown-item dropdown-toggle"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% else %}
+                                                            <a class="dropdown-item"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% endif %}
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <ul class="dropdown-menu">
+                                                                {{ children }}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/references">References</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
+
+
+
+
+                                        {% if user.id is not None %}
+
+                                            <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle"
+                                                                              href="/user/"><i style="color: #fff"
+                                                                                               class="fa fa-user"></i> {{ user.first_name }}
+                                            </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li>
+                                                        <a class="dropdown-item" href="">Comments</a>
+                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/logout/">Log Out</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>{% else %}
+                                            <li class="nav-item"><a class="nav-link" href="/login/"><i
+                                                    style="color: #fff" class="fa fa-sign-in-alt"></i> Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="/signup/"><i
+                                                    style="color: #fff" class="fa fa-sign-out-alt"></i> Sign Up</a></li>
+                                        {% endif %}
+
+
+
+
+                                    {% elif page == 'reference' %}
+
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="/">Home <span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                        </li>
+
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">
+                                                Places
+                                            </a>
+                                            {% load mptt_tags %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                {% recursetree categories %}
+                                                    <li>
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <a class="dropdown-item dropdown-toggle"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% else %}
+                                                            <a class="dropdown-item"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% endif %}
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <ul class="dropdown-menu">
+                                                                {{ children }}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/references">References</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
+
+
+
+
+
+                                        {% if user.id is not None %}
+
+                                            <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle"
+                                                                              href="/user/"><i style="color: #fff"
+                                                                                               class="fa fa-user"></i> {{ user.first_name }}
+                                            </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li>
+                                                        <a class="dropdown-item" href="">Comments</a>
+                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/logout/">Log Out</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>{% else %}
+                                            <li class="nav-item"><a class="nav-link" href="/login/"><i
+                                                    style="color: #fff" class="fa fa-sign-in-alt"></i> Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="/signup/"><i
+                                                    style="color: #fff" class="fa fa-sign-out-alt"></i> Sign Up</a></li>
+                                        {% endif %}
+
+
+
+
+
+                                    {% elif page == 'prop' %}
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="/">Home <span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="/places"
+                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">
+                                                Places
+                                            </a>
+                                            {% load mptt_tags %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                {% recursetree categories %}
+                                                    <li>
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <a class="dropdown-item dropdown-toggle"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% else %}
+                                                            <a class="dropdown-item"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% endif %}
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <ul class="dropdown-menu">
+                                                                {{ children }}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/references">References</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
+
+
+                                        {% if user.id is not None %}
+
+                                            <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle"
+                                                                              href="/user/"><i style="color: #fff"
+                                                                                               class="fa fa-user"></i> {{ user.first_name }}
+                                            </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li>
+                                                        <a class="dropdown-item" href="">Comments</a>
+                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/logout/">Log Out</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>{% else %}
+                                            <li class="nav-item"><a class="nav-link" href="/login/"><i
+                                                    style="color: #fff" class="fa fa-sign-in-alt"></i> Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="/signup/"><i
+                                                    style="color: #fff" class="fa fa-sign-out-alt"></i> Sign Up</a></li>
+                                        {% endif %}
+
+
+
+
+
+
+                                    {% elif page == 'contact' %}
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="/">Home <span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co"
+                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">
+                                                Places
+                                            </a>
+                                            {% load mptt_tags %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                {% recursetree categories %}
+                                                    <li>
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <a class="dropdown-item dropdown-toggle"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% else %}
+                                                            <a class="dropdown-item"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% endif %}
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <ul class="dropdown-menu">
+                                                                {{ children }}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/references">References</a>
+                                        </li>
+
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
+
+                                        {% if user.id is not None %}
+
+
+
+
+                                            <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle"
+                                                                              href="/user/"><i style="color: #fff"
+                                                                                               class="fa fa-user"></i> {{ user.first_name }}
+                                            </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li>
+                                                        <a class="dropdown-item" href="">Comments</a>
+                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/logout/">Log Out</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>{% else %}
+                                            <li class="nav-item"><a class="nav-link" href="/login/"><i
+                                                    style="color: #fff" class="fa fa-sign-in-alt"></i> Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="/signup/"><i
+                                                    style="color: #fff" class="fa fa-sign-out-alt"></i> Sign Up</a></li>
+                                        {% endif %}
+
+
+
+
+
+                                    {% elif page == 'user' %}
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="/">Home <span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co"
+                                               id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                               aria-haspopup="true" aria-expanded="false">
+                                                Places
+                                            </a>
+                                            {% load mptt_tags %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                {% recursetree categories %}
+                                                    <li>
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <a class="dropdown-item dropdown-toggle"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% else %}
+                                                            <a class="dropdown-item"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% endif %}
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <ul class="dropdown-menu">
+                                                                {{ children }}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/references">References</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
+
+
+                                        {% if user.id is not None %}
+
+
+
+
+                                            <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle active"
+                                                                              href="/user/"><i style="color: #fff"
+                                                                                               class="fa fa-user"></i> {{ user.first_name }}
+                                            </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li>
+                                                        <a class="dropdown-item" href="">Comments</a>
+                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/logout/">Log Out</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>{% else %}
+                                            <li class="nav-item"><a class="nav-link" href="/login/"><i
+                                                    style="color: #fff" class="fa fa-sign-in-alt"></i> Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="/signup/"><i
+                                                    style="color: #fff" class="fa fa-sign-out-alt"></i> Sign Up</a></li>
+                                        {% endif %}
+                                    {% endif %}
                                 </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/references">References</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contact">Contact Us</a>
-                            </li>
+                            </div>
+                        </nav>
 
 
-                                {% elif page == 'reference' %}
-                                <li><a href="/">Home</a></li>
-								<li><a href="/aboutus">About us</a></li>
-
-
-                                 <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" role="button"  href="/places" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Places
-                            </a>
-                            {% load mptt_tags %}
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                {% recursetree categories %}
-                                    <li>
-
-                                    {% if not node.is_leaf_node %}
-                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% else %}
-                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% endif %}
-
-                                {% if not node.is_leaf_node %}
-                                    <ul class="dropdown-menu">
-                                        {{ children }}
-                                    </ul>
-                                {% endif %}
-
-                                    </li>
-                                {% endrecursetree %}
-                            </ul>
-                        </li>
-
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/references">References</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contact Us</a>
-                        </li>
-                            
-
-
-
-                            
-
-
-
-
-
-
-                                {% elif page == 'prop' %}
-                                <li class="nav-item">
-                                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/aboutus">About Us</a>
-                            </li>
-                                 <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="/places" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Places
-                            </a>
-                            {% load mptt_tags %}
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                {% recursetree categories %}
-                                    <li>
-
-                                    {% if not node.is_leaf_node %}
-                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% else %}
-                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% endif %}
-
-                                {% if not node.is_leaf_node %}
-                                    <ul class="dropdown-menu">
-                                        {{ children }}
-                                    </ul>
-                                {% endif %}
-
-                                    </li>
-                                {% endrecursetree %}
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/references">References</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contact Us</a>
-                        </li>
-
-
-
-
-
-
-
-                                {% elif page == 'contact' %}
-                            <li class="nav-item">
-                                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/aboutus">About Us</a>
-                            </li>
-                                 <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Places
-                            </a>
-                            {% load mptt_tags %}
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                {% recursetree categories %}
-                                    <li>
-
-                                    {% if not node.is_leaf_node %}
-                                    <a class="dropdown-item dropdown-toggle" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% else %}
-                                    <a class="dropdown-item" href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% endif %}
-
-                                {% if not node.is_leaf_node %}
-                                    <ul class="dropdown-menu">
-                                        {{ children }}
-                                    </ul>
-                                {% endif %}
-
-                                    </li>
-                                {% endrecursetree %}
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/references">References</a>
-                        </li>
-
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/contact">Contact Us</a>
-                        </li>
-
-
-
-
-
-
-                        {% endif %}
-
-                    </ul>
+                        <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    </div>
                 </div>
-            </nav>
-
-
-                    
-						<div class="phone_num ml-auto">
-							<div class="phone_num_inner">
-								<img src="{% static "images/phone.png" %}" alt=""><span>652-345 3222 11</span>
-							</div>
-						</div>
-						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header><br>
+            </div>
+        </div>
+    </header>
+    <br>

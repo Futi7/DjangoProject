@@ -58,9 +58,30 @@
 
 			</div>
 		</div>
-
-
 	</div>
+
+
+  <script>
+
+  $(function() {
+    $("#query").autocomplete({
+      source: "/search_auto/",
+      select: function (event, ui) { //item selected
+        AutoCompleteSelectHandler(event, ui)
+      },
+      minLength: 2,
+    });
+  });
+
+  function AutoCompleteSelectHandler(event, ui)
+  {
+    var selectedObj = ui.item;
+  }
+
+</script>
+
+
+
 
 	<!-- Home Search -->
 	<div class="home_search">
@@ -71,20 +92,42 @@
 						<div class="home_search_content">
 							<form action="/search/" method="post" class="search_form d-flex flex-row align-items-start justfy-content-start">
                                 {% csrf_token %}
+
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<input type="text" name="query" class="contact_input" placeholder="Search">
+                                    <div>
+										<select name="catid" class="search_form_select">
+											<option value="0">All Categories</option>
+                                            {% load mptt_tags %}
+											{% recursetree categories %}
+
+                                            {% if node.is_leaf_node %}
+                                            <option value="{{node.id}}">{{ node.title }}</option>
+                                            {% endif %}
+
+                                            {% if not node.is_leaf_node %}
+                                                <optgroup label="{{ node.title }}">
+                                                    {{ children }}
+                                                </optgroup>
+
+                                            {% endif %}
+
+
+                                             {% endrecursetree %}
+										</select>
+									</div>
+                                    <div style="width:60%">
+									<input type="text" id="query" name="query" class="contact_input" placeholder="Search">
+                                        </div>
 								</div>
 								<button class="search_form_button ml-auto">search</button>
 							</form>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
 
 
 	<!-- Recent -->

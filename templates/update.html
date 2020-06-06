@@ -1,0 +1,50 @@
+{% extends 'homebase.html' %}
+{% block title %}User Profile{% endblock %}
+
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles/news.css" %} ">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/responsive.css" %} ">
+{% endblock %}
+
+{% block body %}
+    <div class="home">
+        <div class="container-fluid" style="margin-top: 10%;">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="sidebar">
+                        {% include 'usermenu.html' %}
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="section_title">
+                        <h3 class="contact-title">User Update</h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="media">
+                            <img src="{{ user.userprofile.image.url }} " style="border-radius: 1900px; height:100px">
+                        </div>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                {{ user_form.as_p }}
+                                {{ profile_form.as_p }}
+                            </fieldset>
+                            <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br>
+{% endblock %}

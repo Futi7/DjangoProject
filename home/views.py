@@ -1,9 +1,12 @@
+import json
+
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.contrib.auth import logout, authenticate, login
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
-from home.forms import SearchForm
-from home.models import Setting, ContactFormu, ContactFormMessage
+from home.forms import SearchForm, SignUpForm
+from home.models import Setting, ContactFormu, ContactFormMessage, UserProfile
 from places.models import Places, Category, Images, Comment
 
 
@@ -80,7 +83,11 @@ def place_search(request):
             categories = Category.objects.all()
             setting = Setting.objects.get(pk=1)
             query = form.cleaned_data['query']
-            places = Places.objects.filter(title__icontains=query)
+            catid = form.cleaned_data['catid']
+            if catid == 0:
+                places = Places.objects.filter(title__icontains=query)
+            else:
+                places = Places.objects.filter(title__icontains=query, category_id=catid)
             count = places.count()
             context = {'places': places, 'categories': categories, 'page': 'prop', 'count': count, 'setting': setting,
                         'lastData': lastData}
@@ -90,6 +97,20 @@ def place_search(request):
 
 
 
+def place_search_auto(request):
+    if request.is_ajax():
+        q = request.GET.get('term', '')
+        place = Places.objects.filter(title__icontains=q)
+        results = []
+        for rs in place:
+            place_json = {}
+            place_json = rs.title
+            results.append(place_json)
+        data = json.dumps(results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data, mimetype)
 
 
 
@@ -105,3 +126,47 @@ def place_detail(request, id, slug):
     keywords = place.keywords.split(', ')
     context = {'place': place, 'categories':categories,'page': 'prop',  'lastData':lastData,'setting': setting, 'keywords':keywords, 'images':images, 'comments':comments}
     return render(request, 'place.html', context)
+
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+
+def login_view(request):
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            messages.warning(request, "Hata ! Kullanıcı adı ya da şifre yanlış")
+            return HttpResponseRedirect('/login')
+    return render(request, 'login.html')
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            current_user = request.user
+            data = UserProfile()
+            data.user_id = current_user.id
+            data.image = "images/users/user.png"
+            data.save()
+            messages.success(request,
+                             "Hoş Geldiniz.. Kendi blog siteme başarılı bir şekilde üye oldunuz.İyi gezinmeler dilerim.")
+            return HttpResponseRedirect('/')
+
+    form = SignUpForm()
+    context ={
+        'form': form,
+    }
+    return render(request, 'signup.html', context)

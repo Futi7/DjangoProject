@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.forms import ModelForm
+from django.urls import reverse
 from django.utils.safestring import mark_safe
 from ckeditor.fields import RichTextField
 
@@ -18,7 +19,7 @@ class Category(MPTTModel):
     keywords = models.CharField(max_length=200, blank='True')
     status = models.CharField(max_length=10, choices=STATUS)
     image = models.ImageField(upload_to='images/')
-    slug = models.SlugField()
+    slug = models.SlugField(null=False, unique=True)
     parent = TreeForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
 
     createdAt = models.DateTimeField(auto_now_add=True)
@@ -43,6 +44,9 @@ class Category(MPTTModel):
 
     image_tag.short_description = 'Image'
 
+    def get_absolute_url(self):
+        return reverse('category_detail', kwargs={'slug': self.slug})
+
 
 class Places(models.Model):
     STATUS = (
@@ -55,7 +59,7 @@ class Places(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200, blank='True')
     details = RichTextField()
-    slug = models.SlugField(blank='True', max_length=150)
+    slug = models.SlugField(null=False, unique=True)
     keywords = models.CharField(max_length=200, blank='True')
     status = models.CharField(max_length=10, choices=STATUS)
     image = models.ImageField(blank='True', upload_to='images/')
@@ -74,6 +78,9 @@ class Places(models.Model):
 
     image_tag.short_description = 'Image'
 
+
+    def get_absolute_url(self):
+        return reverse('places_detail', kwargs={'slug': self.slug})
 
     def catimg_tag(self):
         return mark_safe((Category.status))

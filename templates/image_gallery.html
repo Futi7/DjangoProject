@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ place.title }} Gallery</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/static/styles/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/main_styles.css">
+
+
+
+
+
+
+</head>
+<body>
+<h1>Add new Image</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="hidden" name="place_id" value="{{ place.id }}">
+    <div id="image">
+        <div class="form-group"></label><input type="text" id="id_title" name="title" maxlength="150" placeholder="Title" class="form-control"></div>
+        <div class="form-group"><label for="id_image" class="required">Place Main Image</label>
+            <div class="custom-file"><input type="file" id="id_image" name="image" required="required" placeholder="Image" class="custom-file-input">
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Image</th>
+        <th>actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for image in images %}
+        <tr>
+            <td>{{ image.id }}</td>
+            <td>{{ image.title }}</td>
+            <td><img src="{{ image.image.url }}" height="50"></td>
+            <td>
+                    <form action="/places/place_delete_image/{{ image.id }}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-block btn-danger">Delete</button>
+                    </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

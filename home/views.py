@@ -73,6 +73,26 @@ def category_places(request, id, slug):
     return render(request, 'places.html', context)
 
 
+def category_all(request, id, slug):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    categories = Category.objects.all()
+    categoriesData = Category.objects.filter(parent_id=id)
+    setting = Setting.objects.get(pk=1)
+    places = []
+    for cat in categoriesData:
+        places += Places.objects.filter(category_id=cat.id)
+    places += Places.objects.filter(category_id=id)
+    categoriesData = Category.objects.get(id=id)
+    count = len(places)
+    context = {'places': places, 'categories':categories,'page': 'prop', 'count':count,'setting': setting, 'catData':categoriesData, 'lastData':lastData}
+    return render(request, 'places.html', context)
+
+
+
+
+
+
+
 
 def place_search(request):
 
@@ -111,8 +131,6 @@ def place_search_auto(request):
         data = 'fail'
     mimetype = 'application/json'
     return HttpResponse(data, mimetype)
-
-
 
 
 
@@ -162,7 +180,7 @@ def signup_view(request):
             data.image = "images/users/user.png"
             data.save()
             messages.success(request,
-                             "Hoş Geldiniz.. Kendi blog siteme başarılı bir şekilde üye oldunuz.İyi gezinmeler dilerim.")
+                             "Welcome to most in-demand touristic site !")
             return HttpResponseRedirect('/')
 
     form = SignUpForm()

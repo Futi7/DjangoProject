@@ -1,8 +1,10 @@
 {%  extends 'homebase.html' %}
 {% load static %}
 
+{% block title %}Home{% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
 
-{% block title %}{{ setting.title }}{% endblock %}
 {% block head %}
     <link rel="stylesheet" type="text/css" href="{% static "styles/main_styles.css" %} ">
     <link rel="stylesheet" type="text/css" href="{% static "styles/responsive.css" %} ">

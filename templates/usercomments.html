@@ -1,0 +1,66 @@
+{% extends 'homebase.html' %}
+{% block title %} My Comments {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+
+{% load static %}
+{% block head %}
+       <link rel='shortcut icon' type='image/x-icon' href='/static{{ setting.icon.url }}'/>
+    <link rel="stylesheet" type="text/css" href="{% static "styles/news.css" %} ">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/responsive.css" %} ">
+{% endblock %}
+
+{% block body %}
+<div class="home">
+    <div class="container-fluid" style="margin-top: 10%;">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar">
+                    {% include 'usermenu.html' %}
+                </div>
+            </div>
+            <div class="col-md-9">
+                    <h1>My Comments</h1>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Comment</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Rate</th>
+                            <th>Place</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if comments is not None %}
+                        {% for comment in comments %}
+                            <tr>
+                                <td>{{ comment.subject }}</td>
+                                <td>{{ comment.comment }}</td>
+                                <td>{{ comment.status }}</td>
+                                <td>{{ comment.createdAt }}</td>
+                                <td>{{ comment.rate }}</td>
+                                <td><a href="/place/{{ comment.place.id }}/{{ comment.place.slug }}"> {{ comment.place.title }}</a></td>
+                                <td><a style="margin-top:-5px" class="btn btn-danger col-md-7"
+                                                         href="/user/deletecomment/{{ comment.id }}"
+                                                         onclick="return confirm('Comment will be deleted.Are you sure?')"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="10">no records found</td>
+                            </tr>
+                        {% endif %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+    </div>
+          </div>
+    <br><br><br><br><br>
+    <br><br><br><br>
+{% endblock %}

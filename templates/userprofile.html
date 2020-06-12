@@ -1,4 +1,5 @@
 {% extends 'homebase.html' %}
+
 {% block title %} {{ profile.user_name }} Profile {% endblock %}
 {% block keywords %} {{ setting.keywords }} {% endblock %}
 {% block description %} {{ setting.description }} {% endblock %}
@@ -66,7 +67,7 @@
                         </tbody>
                     </table>
 
-                    Edit Profile:  <a href="/user/update" class="btn btn-info col-md-3"><i class="fa fa-user"></i></a>
+                    Edit Profile:  <a href="/user/update" class="btn btn-info col-md-3"><i class="fa fa-user"></i>Edit Proile</a>
                     Change Password:  <a href="/user/password" class="btn btn-warning col-md-3"><i class="fa fa-key"></i></a>
                 </div>
             </div>

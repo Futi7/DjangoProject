@@ -1,5 +1,5 @@
 {% extends 'homebase.html' %}
-{% block title %} {{ place.title }} Places{% endblock %}
+{% block title %} {{ place.title }} {% endblock %}
 {% block keywords %} {{ place.keywords }}{% endblock %}
 {% block description %} {{ place.description }}{% endblock %}
 
@@ -82,76 +82,9 @@
                 <div class="col-lg-4">
                     <div class="sidebar">
                         <div class="sidebar_search">
-                            <div class="sidebar_search_title">Search your home</div>
+                            <div class="sidebar_search_title">Description</div>
                             <div class="sidebar_search_form_container">
-                                <form action="#" class="sidebar_search_form" id="sidebar_search_form">
-                                    <select class="sidebar_search_select">
-                                        <option disabled selected>Keywords</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                    </select>
-                                    <select class="sidebar_search_select">
-                                        <option disabled selected>Property ID</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                    </select>
-                                    <select class="sidebar_search_select">
-                                        <option disabled selected>Property Status</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                    </select>
-                                    <select class="sidebar_search_select">
-                                        <option disabled selected>City</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                    </select>
-                                    <select class="sidebar_search_select">
-                                        <option disabled selected>Property Type</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                    </select>
-                                    <div class="row sidebar_search_row">
-                                        <div class="col-lg-6">
-                                            <input type="text" class="sidebar_search_input" placeholder="Bedrooms No">
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input type="text" class="sidebar_search_input" placeholder="Bathrooms No">
-                                        </div>
-                                    </div>
-
-                                    <!-- Filter Price -->
-                                    <div class="price_filter">
-                                        <div class="price_filter_values d-flex flex-row align-items-center justfy-content-start">
-                                            <div>Min Price</div>
-                                            <div class="ml-auto">Max Price</div>
-                                        </div>
-                                        <input type="range" min="0" max="1000" step="10" value="250" data-rangeslider=""
-                                               style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
-                                    </div>
-
-                                    <!-- Filter Area -->
-                                    <div class="area_filter">
-                                        <div class="price_filter_values d-flex flex-row align-items-center justfy-content-start">
-                                            <div>Min Price</div>
-                                            <div class="ml-auto">Max Price</div>
-                                        </div>
-                                        <input type="range" min="0" max="1000" step="10" value="300" data-rangeslider=""
-                                               style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
-                                    </div>
-                                    <button class="sidebar_search_button search_form_button"
-                                            style="height: 72px;!important">search
-                                    </button>
-                                </form>
+                                <p>{{ place.description }}</p>
                             </div>
                         </div>
 
@@ -160,7 +93,7 @@
                             <div class="sidebar_realtor_image"><img src=" {% static "images/sidebar_realtor.jpg" %}"
                                                                     alt=""></div>
                             <div class="sidebar_realtor_body text-center">
-                                <div class="sidebar_realtor_title"><a href="#">Maria Williams</a></div>
+                                <div class="sidebar_realtor_title"><a href="#"> {{ place.user.first_name}} </a></div>
                                 <div class="sidebar_realtor_subtitle">Senior Realtor</div>
                                 <div class="sidebar_realtor_phone"><span>call us: </span>652 345 3222 11</div>
                                 <div class="realtor_link"><a href="#">+</a></div>
@@ -211,12 +144,6 @@
 
                         <!-- Description -->
 
-                        <div class="property_description">
-                            <div class="property_title">Description</div>
-                            <div class="property_text property_text_2">
-                                <p>{{ place.description }}</p>
-                            </div>
-                        </div>
 
                         <!-- Additional Details -->
 

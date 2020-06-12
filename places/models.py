@@ -1,6 +1,7 @@
+from ckeditor.widgets import CKEditorWidget
 from django.contrib.auth.models import User
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, Select, FileInput
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from ckeditor.fields import RichTextField
@@ -55,7 +56,7 @@ class Places(models.Model):
     )
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200, blank='True')
     details = RichTextField()
@@ -84,6 +85,28 @@ class Places(models.Model):
 
     def catimg_tag(self):
         return mark_safe((Category.status))
+
+
+class PlacesForm(ModelForm):
+    class Meta:
+        model = Places
+        fields = ['category', 'title', 'slug', 'keywords','price','country', 'audience', 'description', 'image', 'details']
+        widgets = {
+            'title': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Title'}),
+            'slug': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Slug'}),
+            'keywords': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Keywords'}),
+            'description': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Description'}),
+            'price': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Price'}),
+            'country': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Country'}),
+            'audience': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Audience'}),
+            'category': Select(attrs={'class': 'form-control valid', 'placeholder': 'Category'}, choices=Category.objects.all()),
+            'image': FileInput(attrs={'class': 'form-control valid', 'placeholder': 'Image'}),
+            'details': CKEditorWidget(),
+        }
+
+
+
+
 
 
 class Comment(models.Model):
@@ -123,7 +146,10 @@ class Images(models.Model):
     image_tag.short_description = 'Image'
 
 
-
+class ImageForm(ModelForm):
+    class Meta:
+        model = Images
+        fields = ['title', 'image']
 
 
 

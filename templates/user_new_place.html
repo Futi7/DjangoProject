@@ -1,0 +1,67 @@
+{% extends 'homebase.html' %}
+{% block title %} Add New Place {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+
+{% load static %}
+{% block head %}
+       <link rel='shortcut icon' type='image/x-icon' href='/static{{ setting.icon.url }}'/>
+    <link rel="stylesheet" type="text/css" href="{% static "styles/news.css" %} ">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/responsive.css" %} ">
+{% endblock %}
+{% block body %}
+<div class="home">
+    <div class="container-fluid" style="margin-top: 10%;">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar">
+                    {% include 'usermenu.html' %}
+                </div>
+            </div>
+            <div class="col-md-9">
+    <h1>Add New Place</h1>
+        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                {{ form.media }}
+                                {{ form.as_p }}
+                            </fieldset>
+                            <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Update</button>
+                            </div>
+                        </form>
+
+
+    <a href="">back to list</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+{% endblock %}

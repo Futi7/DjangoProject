@@ -41,8 +41,8 @@
                                                     <li>
 
                                                         {% if not node.is_leaf_node %}
-                                                            <a class="dropdown-item dropdown-toggle" role="button"
-                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                            <a class="dropdown-item dropdown-toggle"  onclick="window.location='/category_all/{{ node.id }}/{{ node.slug }}'"
+                                                              href="/category_all/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                                         {% else %}
                                                             <a class="dropdown-item"
                                                                href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
@@ -78,8 +78,8 @@
 
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                     <li>
-                                                        <a class="dropdown-item" href="">Comments</a>
-                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/user/comments">Comments</a>
+                                                        <a class="dropdown-item" href="/user/places">My Places</a>
                                                         <a class="dropdown-item" href="/logout/">Log Out</a>
                                                     </li>
                                                 </ul>
@@ -105,9 +105,8 @@
 
 
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" role="button" href="/places"
-                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                               aria-expanded="false">
+                                           <a class="nav-link dropdown-toggle" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                                                 Places
                                             </a>
                                             {% load mptt_tags %}
@@ -116,8 +115,8 @@
                                                     <li>
 
                                                         {% if not node.is_leaf_node %}
-                                                            <a class="dropdown-item dropdown-toggle"
-                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                            <a class="dropdown-item dropdown-toggle"  onclick="window.location='/category_all/{{ node.id }}/{{ node.slug }}'"
+                                                              href="/category_all/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                                         {% else %}
                                                             <a class="dropdown-item"
                                                                href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
@@ -154,8 +153,8 @@
 
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                     <li>
-                                                        <a class="dropdown-item" href="">Comments</a>
-                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/user/comments">Comments</a>
+                                                        <a class="dropdown-item" href="/user/places">My Places</a>
                                                         <a class="dropdown-item" href="/logout/">Log Out</a>
                                                     </li>
                                                 </ul>
@@ -183,8 +182,7 @@
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" role="button" href="/places"
-                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                               aria-expanded="false">
+                                               id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                                                 Places
                                             </a>
                                             {% load mptt_tags %}
@@ -193,8 +191,8 @@
                                                     <li>
 
                                                         {% if not node.is_leaf_node %}
-                                                            <a class="dropdown-item dropdown-toggle"
-                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                            <a class="dropdown-item dropdown-toggle"  onclick="window.location='/category_all/{{ node.id }}/{{ node.slug }}'"
+                                                              href="/category_all/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                                         {% else %}
                                                             <a class="dropdown-item"
                                                                href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
@@ -232,8 +230,8 @@
 
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                     <li>
-                                                        <a class="dropdown-item" href="">Comments</a>
-                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/user/comments">Comments</a>
+                                                        <a class="dropdown-item" href="/user/places">My Places</a>
                                                         <a class="dropdown-item" href="/logout/">Log Out</a>
                                                     </li>
                                                 </ul>
@@ -258,9 +256,8 @@
                                             <a class="nav-link" href="/aboutus">About Us</a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle active" href="/places"
-                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                               aria-expanded="false">
+                                            <a class="nav-link dropdown-toggle active" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                                                 Places
                                             </a>
                                             {% load mptt_tags %}
@@ -269,8 +266,8 @@
                                                     <li>
 
                                                         {% if not node.is_leaf_node %}
-                                                            <a class="dropdown-item dropdown-toggle"
-                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                            <a class="dropdown-item dropdown-toggle"  onclick="window.location='/category_all/{{ node.id }}/{{ node.slug }}'"
+                                                              href="/category_all/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                                         {% else %}
                                                             <a class="dropdown-item"
                                                                href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
@@ -305,8 +302,8 @@
 
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                     <li>
-                                                        <a class="dropdown-item" href="">Comments</a>
-                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/user/comments">Comments</a>
+                                                        <a class="dropdown-item" href="/user/places">My Places</a>
                                                         <a class="dropdown-item" href="/logout/">Log Out</a>
                                                     </li>
                                                 </ul>
@@ -332,9 +329,8 @@
                                             <a class="nav-link" href="/aboutus">About Us</a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co"
-                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                               aria-expanded="false">
+                                            <a class="nav-link dropdown-toggle" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                                                 Places
                                             </a>
                                             {% load mptt_tags %}
@@ -343,8 +339,8 @@
                                                     <li>
 
                                                         {% if not node.is_leaf_node %}
-                                                            <a class="dropdown-item dropdown-toggle"
-                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                            <a class="dropdown-item dropdown-toggle"  onclick="window.location='/category_all/{{ node.id }}/{{ node.slug }}'"
+                                                              href="/category_all/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                                         {% else %}
                                                             <a class="dropdown-item"
                                                                href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
@@ -381,8 +377,8 @@
 
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                     <li>
-                                                        <a class="dropdown-item" href="">Comments</a>
-                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/user/comments">Comments</a>
+                                                        <a class="dropdown-item" href="/user/places">My Places</a>
                                                         <a class="dropdown-item" href="/logout/">Log Out</a>
                                                     </li>
                                                 </ul>
@@ -407,9 +403,8 @@
                                             <a class="nav-link" href="/aboutus">About Us</a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co"
-                                               id="navbarDropdownMenuLink" data-toggle="dropdown"
-                                               aria-haspopup="true" aria-expanded="false">
+                                            <a class="nav-link dropdown-toggle" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                                                 Places
                                             </a>
                                             {% load mptt_tags %}
@@ -418,15 +413,15 @@
                                                     <li>
 
                                                         {% if not node.is_leaf_node %}
-                                                            <a class="dropdown-item dropdown-toggle"
-                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                            <a class="dropdown-item dropdown-toggle"  onclick="window.location='/category_all/{{ node.id }}/{{ node.slug }}'"
+                                                              href="/category_all/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                                         {% else %}
                                                             <a class="dropdown-item"
                                                                href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
                                                         {% endif %}
 
                                                         {% if not node.is_leaf_node %}
-                                                            <ul class="dropdown-menu">
+                                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                                 {{ children }}
                                                             </ul>
                                                         {% endif %}
@@ -457,8 +452,8 @@
 
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                     <li>
-                                                        <a class="dropdown-item" href="">Comments</a>
-                                                        <a class="dropdown-item" href="">My Places</a>
+                                                        <a class="dropdown-item" href="/user/comments">Comments</a>
+                                                        <a class="dropdown-item" href="/user/places">My Places</a>
                                                         <a class="dropdown-item" href="/logout/">Log Out</a>
                                                     </li>
                                                 </ul>

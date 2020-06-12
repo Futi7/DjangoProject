@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 
 from home.models import Setting, UserProfile
-from places.models import Places, Category
+from places.models import Places, Category, Comment, PlacesForm
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -81,3 +81,101 @@ def change_password(request):
             'lastData': lastData,
         }
         return render(request, 'changepassword.html', context)
+
+@login_required(login_url='/login')
+def comments(request):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    comment = Comment.objects.filter(user_id=current_user.id)
+    categories = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    context = {'setting': setting, 'page': 'user', 'categories': categories, 'lastData': lastData, 'comments':comment, 'profile': profile}
+
+    return render(request, 'usercomments.html', context)
+
+
+@login_required(login_url='/login')
+def deletecomment(request, id):
+    current_user = request.user
+    Comment.objects.filter(id=id, user_id= current_user).delete()
+    messages.success(request, 'Comment succesfully deleted.')
+    return HttpResponseRedirect('/user/comments')
+
+
+@login_required(login_url='/login')
+def places(request):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    places = Places.objects.filter(user_id=current_user.id)
+    categories = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    context = {'setting': setting, 'page': 'user', 'categories': categories, 'lastData': lastData, 'places':places, 'profile': profile}
+
+    return render(request, 'user_places.html', context)
+
+
+def user_new_place(request):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    places = Places.objects.filter(user_id=current_user.id)
+    categories = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    if request.method == 'POST':
+        form = PlacesForm(request.POST, request.FILES)
+        if form.is_valid():
+            current_user = request.user
+            data = Places()
+            data.user_id = current_user.id
+            data.title = form.cleaned_data['title']
+            data.keywords = form.cleaned_data['keywords']
+            data.description = form.cleaned_data['description']
+            data.image = form.cleaned_data['image']
+            data.price = form.cleaned_data['price']
+            data.country = form.cleaned_data['country']
+            data.audience = form.cleaned_data['audience']
+            data.category = form.cleaned_data['category']
+            data.slug = form.cleaned_data['slug']
+            data.detail = form.cleaned_data['detail']
+            data.status = 'False'
+            data.save()
+            messages.success(request, 'Place add succesfully registered.')
+            return HttpResponseRedirect('/user/placess')
+        else:
+            messages.success(request, 'Content Form Error :' + str(form.errors))
+            return HttpResponseRedirect('/user/user_new_place')
+    else:
+        category = Category.objects.all()
+        form = PlacesForm()
+        context = {'category': category, 'form': form, 'setting': setting, 'page': 'user', 'categories': categories, 'lastData': lastData, 'places':places, 'profile': profile}
+        return render(request, 'user_new_place.html', context)
+
+
+
+@login_required(login_url='/login')
+def user_edit_place(request, id):
+    lastData = Places.objects.all().order_by('-id')[:3]
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    place = Places.objects.get(id=id)
+    categories = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    if request.method == 'POST':
+        form = PlacesForm(request.POST, request.FILES, instance=place)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your place successfuly updated')
+            return HttpResponseRedirect('/user/places')
+        else:
+            messages.success(request, 'Content Form Error :' + str(form.errors))
+            return HttpResponseRedirect('/user/user_edit_place/' + str(id))
+    else:
+        category = Category.objects.all()
+        form = PlacesForm(instance=place)
+        context = {'category': category, 'form': form, 'setting': setting, 'page': 'user', 'categories': categories,
+                   'lastData': lastData, 'places': places, 'profile': profile}
+
+
+    return render(request, 'user_new_place.html', context)

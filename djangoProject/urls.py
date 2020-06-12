@@ -18,6 +18,8 @@ urlpatterns = [
     path('aboutus/', views.aboutus, name='about'),
     path('reference/', views.reference, name='reference'),
     path('category/<int:id>/<slug:slug>/', views.category_places, name='category'),
+    path('category_all/<int:id>/<slug:slug>/', views.category_all, name='category_all'),
+
     path('place/<int:id>/<slug:slug>/', views.place_detail, name='place'),
     path('search/', views.place_search, name="place_search"),
     path('search_auto/', views.place_search_auto, name='place_search_auto'),

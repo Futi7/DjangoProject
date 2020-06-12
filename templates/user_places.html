@@ -1,0 +1,82 @@
+{% extends 'homebase.html' %}
+{% block title %} My places {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+
+{% load static %}
+{% block head %}
+       <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+    <link rel="stylesheet" type="text/css" href="{% static "styles/news.css" %} ">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/responsive.css" %} ">
+{% endblock %}
+
+{% block body %}
+<div class="home">
+    <div class="container-fluid" style="margin-top: 10%;">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar">
+                    {% include 'usermenu.html' %}
+                </div>
+            </div>
+            <div class="col-md-9">
+                    <div class="row">
+                        <h1 class="col-11">My places</h1>
+                        <a class="btn btn-success col-1" style="height: 35px;margin-top: 15px" href="/user/user_new_place"><i class="fa fa-plus-square"></i></a>
+
+
+
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if places is not None %}
+                        {% for place in places %}
+                            <tr>
+                                <td><a href="/place/{{ place.id }}/{{ place.slug }}" >{{ place.title }}</a></td>
+                                <td><img src="{{ place.image.url }}" height="40" width="40"></td>
+                                <td>{{ place.category }}</td>
+                                <td>{{ place.status }}</td>
+                                <td>{{ place.createdAt }}</td>
+
+                                <td>
+                                    <a style="margin-left: 23px" href="javascript:window.open('/places/image_gallery/{{ place.id }}', '_blank', 'toolbar=no','scrollbars=yes','resizable=yes','top=500','left=500','width=500','height=500');">
+                                        <img src="/static/images/gallery.png" height="40">
+                                    </a>
+                                <a style="margin-top:-5px" class="btn btn-warning col-md-3"
+                                                         href="/user/user_edit_place/{{ place.id }}">
+                                                         <i class="fa fa-edit"></i></a>
+
+
+
+                                <a style="margin-top:-5px" class="btn btn-danger col-md-3"
+                                                         href="/user/deleteplace/{{ place.id }}"
+                                                         onclick="return confirm('place will be deleted.Are you sure?')"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="10">no records found</td>
+                            </tr>
+                        {% endif %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+    </div>
+          </div>
+    <br><br><br><br><br>
+    <br><br><br><br>
+{% endblock %}

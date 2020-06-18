@@ -6,14 +6,14 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactFormu, ContactFormMessage, UserProfile
+from home.models import Setting, ContactFormu, ContactFormMessage, UserProfile, FAQ
 from places.models import Places, Category, Images, Comment
 
 
 def index(request):
     setting = Setting.objects.get(pk=1)
     sliderData = Places.objects.all()[0:5]
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     context = {'setting': setting, 'page': 'home', 'sliderData': sliderData, 'categories': categories, 'lastData':lastData}
 
@@ -21,7 +21,7 @@ def index(request):
 
 
 def aboutus(request):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
     context = {'setting': setting, 'page': 'about', 'categories': categories, 'lastData':lastData}
@@ -29,7 +29,7 @@ def aboutus(request):
     return render(request, 'aboutus.html', context)
 
 def reference(request):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
     context = {'setting': setting, 'page': 'reference', 'categories': categories, 'lastData':lastData}
@@ -51,7 +51,7 @@ def contact(request):
             messages.success(request, "Mesajınız başarıyla gönderilmiştir")
             return HttpResponseRedirect('/contact')
 
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
     form = ContactFormu()
@@ -63,25 +63,25 @@ def contact(request):
 
 
 def category_places(request, id, slug):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     categoriesData = Category.objects.get(pk=id)
     setting = Setting.objects.get(pk=1)
-    places = Places.objects.filter(category_id=id)
-    count = Places.objects.filter(category_id = id).count()
+    places = Places.objects.filter(category_id=id, status='True')
+    count = Places.objects.filter(category_id=id).count()
     context = {'places': places, 'categories':categories,'page': 'prop', 'count':count,'setting': setting, 'catData':categoriesData, 'lastData':lastData}
     return render(request, 'places.html', context)
 
 
 def category_all(request, id, slug):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     categoriesData = Category.objects.filter(parent_id=id)
     setting = Setting.objects.get(pk=1)
     places = []
     for cat in categoriesData:
-        places += Places.objects.filter(category_id=cat.id)
-    places += Places.objects.filter(category_id=id)
+        places += Places.objects.filter(category_id=cat.id, status='True')
+    places += Places.objects.filter(category_id=id, status='True')
     categoriesData = Category.objects.get(id=id)
     count = len(places)
     context = {'places': places, 'categories':categories,'page': 'prop', 'count':count,'setting': setting, 'catData':categoriesData, 'lastData':lastData}
@@ -89,7 +89,13 @@ def category_all(request, id, slug):
 
 
 
-
+def faq(request):
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
+    setting = Setting.objects.get(pk=1)
+    categories = Category.objects.all()
+    faq = FAQ.objects.all().order_by('ordernumber')
+    context = {'categories':categories, 'setting': setting, 'faq': faq, 'page': 'contact', 'lastData':lastData}
+    return render(request, 'faq.html', context)
 
 
 
@@ -99,7 +105,7 @@ def place_search(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)
         if form.is_valid():
-            lastData = Places.objects.all().order_by('-id')[:3]
+            lastData = Places.objects.filter(status='True').order_by('-id')[:3]
             categories = Category.objects.all()
             setting = Setting.objects.get(pk=1)
             query = form.cleaned_data['query']
@@ -135,14 +141,15 @@ def place_search_auto(request):
 
 
 def place_detail(request, id, slug):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     comments = Comment.objects.filter(place_id=id, status ='True')
     setting = Setting.objects.get(pk=1)
     images = Images.objects.filter(place_id=id)
     place = Places.objects.get(pk=id)
-    keywords = place.keywords.split(', ')
-    context = {'place': place, 'categories':categories,'page': 'prop',  'lastData':lastData,'setting': setting, 'keywords':keywords, 'images':images, 'comments':comments}
+    profile = UserProfile.objects.get(user=place.user)
+    keywords = place.keywords.split(',')
+    context = {'place': place, 'categories':categories,'page': 'prop',  'lastData':lastData,'setting': setting, 'keywords':keywords, 'images':images,'profile':profile, 'comments':comments}
     return render(request, 'place.html', context)
 
 

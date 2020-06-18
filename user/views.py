@@ -12,7 +12,7 @@ from user.forms import UserUpdateForm, ProfileUpdateForm
 
 @login_required(login_url='/login')
 def index(request):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     categories = Category.objects.all()
@@ -35,7 +35,7 @@ def user_update(request):
     else:
         categories = Category.objects.all()
         user_form = UserUpdateForm(instance=request.user)
-        lastData = Places.objects.all().order_by('-id')[:3]
+        lastData = Places.objects.filter(status='True').order_by('-id')[:3]
         current_user = request.user
 
         setting = Setting.objects.get(pk=1)
@@ -69,7 +69,7 @@ def change_password(request):
         categories = Category.objects.all()
         setting = Setting.objects.get(pk=1)
         current_user = request.user
-        lastData = Places.objects.all().order_by('-id')[:3]
+        lastData = Places.objects.filter(status='True').order_by('-id')[:3]
         profile = UserProfile.objects.get(user_id=current_user.id)
         form = PasswordChangeForm(request.user)
         context = {
@@ -84,7 +84,7 @@ def change_password(request):
 
 @login_required(login_url='/login')
 def comments(request):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     comment = Comment.objects.filter(user_id=current_user.id)
@@ -105,7 +105,7 @@ def deletecomment(request, id):
 
 @login_required(login_url='/login')
 def places(request):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     places = Places.objects.filter(user_id=current_user.id)
@@ -117,7 +117,7 @@ def places(request):
 
 
 def user_new_place(request):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     places = Places.objects.filter(user_id=current_user.id)
@@ -135,10 +135,12 @@ def user_new_place(request):
             data.image = form.cleaned_data['image']
             data.price = form.cleaned_data['price']
             data.country = form.cleaned_data['country']
+            data.visit_hours = form.cleaned_data['visit_hours']
+            data.currency = form.cleaned_data['currency']
             data.audience = form.cleaned_data['audience']
             data.category = form.cleaned_data['category']
             data.slug = form.cleaned_data['slug']
-            data.detail = form.cleaned_data['detail']
+            data.detail = form.cleaned_data['details']
             data.status = 'False'
             data.save()
             messages.success(request, 'Place add succesfully registered.')
@@ -156,7 +158,7 @@ def user_new_place(request):
 
 @login_required(login_url='/login')
 def user_edit_place(request, id):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     place = Places.objects.get(id=id)

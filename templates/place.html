@@ -31,7 +31,7 @@
                         </div>
                         <div class="intro_price_container ml-lg-auto d-flex flex-column align-items-start justify-content-center">
                             <div>Entrance Fee</div>
-                            <div class="intro_price">{% if place.price != 0.0 %}$ {{ place.price }}{% else %}
+                            <div class="intro_price">{% if place.price != 0 %}{{ place.currency }} {{ place.price }}{% else %}
                                 Ücretsiz {% endif %}</div>
                         </div>
                     </div>
@@ -90,13 +90,13 @@
 
                         <!-- Realtor -->
                         <div class="sidebar_realtor">
-                            <div class="sidebar_realtor_image"><img src=" {% static "images/sidebar_realtor.jpg" %}"
-                                                                    alt=""></div>
+                            <div class="sidebar_realtor_image"><img src={{profile.image.url}}
+                                                                    alt="" width="375px"></div>
                             <div class="sidebar_realtor_body text-center">
-                                <div class="sidebar_realtor_title"><a href="#"> {{ place.user.first_name}} </a></div>
-                                <div class="sidebar_realtor_subtitle">Senior Realtor</div>
-                                <div class="sidebar_realtor_phone"><span>call us: </span>652 345 3222 11</div>
-                                <div class="realtor_link"><a href="#">+</a></div>
+                                <div class="sidebar_realtor_title"><a href="#"> {{ place.user.first_name}} {{ place.user.last_name }}</a></div>
+                                <div class="sidebar_realtor_subtitle">{{profile.city}}</div>
+                                <div class="sidebar_realtor_phone"><span>call us: </span>{{ profile.phone}}</div>
+
                             </div>
                         </div>
                     </div>
@@ -124,8 +124,8 @@
                                     <div class="property_room_title">Currency</div>
                                     <div class="property_room_content d-flex flex-row align-items-center justify-content-start">
                                         <div class="room_icon"><img
-                                                src="{% static "images/different-currencies-grey.png" %}" alt=""></div>
-                                        <div class="room_num">{{ place.price }}</div>
+                                                src="{% static "images/clock-circular-outline.png" %}" alt=""></div>
+                                        <div class="room_num">{{ place.visit_hours }}</div>
                                     </div>
                                 </div>
 
@@ -252,7 +252,7 @@
                             <div><div class="latest_post_image"><img src="" alt=""></div></div>
                             <div class="latest_post_content">
                                 <div class="latest_post_date">By {{ comment.user.username }}    --  <b>  Rate:[{{ comment.rate }}]</b> {{ comment.createdAt }}</div>
-                                <div class="latest_post_title"><a href="">{{ comment.subject }}</a></div>
+                                <div class="latest_post_title"><b>{{ comment.subject }}</b></div>
                                 <div class="latest_post_author">{{ comment.comment }}</div>
                             </div>
                         </div>

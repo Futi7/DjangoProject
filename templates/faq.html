@@ -1,0 +1,50 @@
+{% extends 'homebase.html' %}
+
+{% block title %}FAQ{% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles/about.css" %} ">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/about_responsive.css" %} ">
+    <script>
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
+{% endblock %}
+
+
+{% block body %}
+    <div class="about">
+
+
+        <!-- Realtors -->
+
+        <div class="realtors">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section_title">Frequently Asked Questions</div>
+                    </div>
+                </div>
+                <div class="row realtors_row">
+
+                    <div id="accordion">
+                        {% for rs in faq %}
+                            <h5>
+                                {{ rs.question }}
+                            </h5>
+                            <div>
+                                <p>{{ rs.answer }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

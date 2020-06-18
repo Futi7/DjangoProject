@@ -31,11 +31,11 @@
 						<div class="property_body text-center">
 							<div class="property_location">{{ prod.country }}</div>
 							<div class="property_title"><a href="/place/{{ prod.id }}/{{ prod.slug }}">{{ prod.title }}</a></div>
-							<div class="property_price">{% if prod.price != 0.0 %}$ {{ prod.price }}{% else %} Ücretsiz {% endif %}</div>
+							<div class="property_price">Giriş Ücreti: {% if prod.price != 0 %}{{ prod.currency }} {{ prod.price }}{% else %} Ücretsiz {% endif %}</div>
 						</div>
 						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
                             <div><div class="property_icon"><img src="{% static "images/seo-and-web.png" %}" alt=""></div><span>{{ prod.country}}</span></div>
-							<div><div class="property_icon"><img src="{% static "images/different-currencies.png" %}" alt=""></div><span>{{ prod.price }}</span></div>
+							<div><div class="property_icon"><img src="{% static "images/clock-circular-outline.png" %}" alt=""></div><span>{{ prod.visit_hours }}</span></div>
 							<div><div class="property_icon"><img src="{% static "images/business.png" %}" alt=""></div><span>{{ prod.audience }}</span></div>
 						</div>
 					</div>
@@ -45,18 +45,7 @@
 
 
 			</div>
-			<div class="row">
-				<div class="col">
-					<div class="pagination">
-						<ul>
-							<li class="active"><a href="#">01.</a></li>
-							<li><a href="#">02.</a></li>
-							<li><a href="#">03.</a></li>
-							<li><a href="#">04.</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+
 		</div>
 	</div>
 

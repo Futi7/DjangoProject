@@ -8,10 +8,10 @@ from places.models import CommentForm, Comment, ImageForm, Images, Places, Categ
 
 
 def index(request):
-    lastData = Places.objects.all().order_by('-id')[:3]
+    lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
-    places = Places.objects.all()
+    places = Places.objects.filter(status='True')
     count = Places.objects.all().count()
     context = {'places': places, 'categories': categories, 'page': 'prop', 'count': count, 'setting': setting,
                 'lastData': lastData}

@@ -21,6 +21,13 @@
                 </div>
             </div>
             <div class="col-md-9">
+            {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
                     <div class="row">
                         <h1 class="col-11">My places</h1>
                         <a class="btn btn-success col-1" style="height: 35px;margin-top: 15px" href="/user/user_new_place"><i class="fa fa-plus-square"></i></a>

@@ -37,8 +37,8 @@
 													<span> {{ slide.country }}</span>
 												</li>
 												<li>
-													<div class="home_details_image"><img style="margin-top:-4px" src="{% static "images/different-currencies.png" %}" alt=""></div>
-													<span> para birimi</span>
+													<div class="home_details_image"><img style="margin-top:-4px" src="{% static "images/clock-circular-outline.png" %}" alt=""></div>
+													<span> {{ slide.visit_hours }}</span>
 												</li>
 												<li>
 													<div class="home_details_image"><img style="margin-top:-4px" src="{% static "images/business.png" %}" alt=""></div>
@@ -46,7 +46,7 @@
 												</li>
 											</ul>
 										</div>
-										<div class="home_price">{% if slide.price != 0.0 %}$ {{ slide.price }}{% else %} Ücretsiz {% endif %}</div>
+										<div class="home_price">{% if slide.price != 0.0 %}{{ slide.currency }} {{ slide.price }}{% else %} Ücretsiz {% endif %}</div>
 									</div>
 								</div>
 							</div>
@@ -160,11 +160,11 @@
 										<div class="recent_item_body text-center">
 											<div class="recent_item_location">{{ slide.country }}</div>
 											<div class="recent_item_title"><a href="/place/{{ slide.id }}/{{ slide.slug }}">{{ slide.title }}</a></div>
-											<div class="recent_item_price">{% if slide.price != 0.0 %}$ {{ slide.price }}{% else %} Ücretsiz {% endif %}</div>
+											<div class="recent_item_price">{% if slide.price != 0.0 %}{{ slide.currency }} {{ slide.price }}{% else %} Ücretsiz {% endif %}</div>
 										</div>
 										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
 											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/seo-and-web.png" %}" alt=""></div><span>{{ slide.country}}</span></div>
-											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/different-currencies.png" %}" alt=""></div><span>{{ slide.price }}</span></div>
+											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/clock-circular-outline.png" %}" alt=""></div><span>{{ slide.audience }}</span></div>
 											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/business.png" %}" alt=""></div><span>{{ slide.audience }}</span></div>
 										</div>
 									</div>
@@ -180,7 +180,7 @@
 							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 						</div>
 					</div>
-					<div class="button recent_button"><a href="#">see more</a></div>
+					<div class="button recent_button"><a href="/places">see more</a></div>
 				</div>
 			</div>
 		</div>
@@ -217,76 +217,5 @@
 		</div>
 	</div>
 
-	<!-- Testimonials -->
 
-	<div class="testimonials">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title">What our clients say</div>
-					<div class="section_subtitle">Search your dream home</div>
-				</div>
-			</div>
-			<div class="row testimonials_row">
-
-				<!-- Testimonial Item -->
-				<div class="col-lg-4 testimonial_col">
-					<div class="testimonial">
-						<div class="testimonial_title">Amazing home for me</div>
-						<div class="testimonial_text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</div>
-						<div class="testimonial_author_image"><img src="{% static "images/testimonial_1.jpg" %}" alt=""></div>
-						<div class="testimonial_author"><a href="#">Diane Smith</a><span>, Client</span></div>
-						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
-					</div>
-				</div>
-
-				<!-- Testimonial Item -->
-				<div class="col-lg-4 testimonial_col">
-					<div class="testimonial">
-						<div class="testimonial_title">Friendly Realtors</div>
-						<div class="testimonial_text">Nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit.</div>
-						<div class="testimonial_author_image"><img src="{% static "images/testimonial_2.jpg" %}" alt=""></div>
-						<div class="testimonial_author"><a href="#">Michael Duncan</a><span>, Client</span></div>
-						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
-					</div>
-				</div>
-
-				<!-- Testimonial Item 86x86 -->
-				<div class="col-lg-4 testimonial_col">
-					<div class="testimonial">
-						<div class="testimonial_title">Very good communication</div>
-						<div class="testimonial_text">Retiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</div>
-						<div class="testimonial_author_image"><img src="{% static "images/testimonial_3.jpg" %}" alt=""></div>
-						<div class="testimonial_author"><a href="#">Shawn Gaines</a><span>, Client</span></div>
-						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static "images/newsletter.jpg" %}" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="newsletter_content d-flex flex-lg-row flex-column align-items-start justify-content-start">
-						<div class="newsletter_title_container">
-							<div class="newsletter_title">Are you buying or selling?</div>
-							<div class="newsletter_subtitle">Search your dream home</div>
-						</div>
-						<div class="newsletter_form_container">
-							<form action="#" class="newsletter_form">
-								<input type="email" class="newsletter_input" placeholder="Your e-mail address" required="required">
-								<button class="newsletter_button">subscribe now</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 {% endblock %}

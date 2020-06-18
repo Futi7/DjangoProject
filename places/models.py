@@ -55,6 +55,13 @@ class Places(models.Model):
         ('False', 'Hayır')
     )
 
+    CURRENCIES = (
+        ('₺', 'Türk Lirası'),
+        ('$', 'Dolar'),
+        ('€', 'Euro')
+    )
+
+
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
@@ -67,6 +74,8 @@ class Places(models.Model):
     price = models.FloatField()
     country = models.CharField(max_length=20, blank='True')
     audience = models.CharField(max_length=20, blank='True')
+    currency = models.CharField(max_length=10, choices=CURRENCIES)
+    visit_hours = models.CharField(max_length=20, blank='True')
 
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now_add=True)
@@ -90,7 +99,12 @@ class Places(models.Model):
 class PlacesForm(ModelForm):
     class Meta:
         model = Places
-        fields = ['category', 'title', 'slug', 'keywords','price','country', 'audience', 'description', 'image', 'details']
+        CURRENCIES = (
+            ('₺', 'Türk Lirası'),
+            ('$', 'Dolar'),
+            ('€', 'Euro')
+        )
+        fields = ['category', 'title', 'slug', 'keywords','currency','price','visit_hours','country', 'audience', 'description', 'image', 'details']
         widgets = {
             'title': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Title'}),
             'slug': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Slug'}),
@@ -100,6 +114,8 @@ class PlacesForm(ModelForm):
             'country': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Country'}),
             'audience': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Audience'}),
             'category': Select(attrs={'class': 'form-control valid', 'placeholder': 'Category'}, choices=Category.objects.all()),
+            'currency': Select(attrs={'class': 'form-control valid', 'placeholder': 'Currency'}, choices=CURRENCIES),
+            'visit_hours': TextInput(attrs={'class': 'form-control valid', 'placeholder': 'Visiting Hours(Ex:09:00-17:00'}),
             'image': FileInput(attrs={'class': 'form-control valid', 'placeholder': 'Image'}),
             'details': CKEditorWidget(),
         }

@@ -67,6 +67,8 @@ class Places(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200, blank='True')
     details = RichTextField()
+    likes_count = models.IntegerField(default=0)
+    comments_count = models.IntegerField(default=0)
     slug = models.SlugField(null=False, unique=True)
     keywords = models.CharField(max_length=200, blank='True')
     status = models.CharField(max_length=10, choices=STATUS)
@@ -151,11 +153,16 @@ class CommentForm(ModelForm):
         fields = ['subject', 'comment', 'rate']
 
 
+class Likes(models.Model):
+    place = models.ForeignKey(Places, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
 
 class Images(models.Model):
     place = models.ForeignKey(Places, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     image = models.ImageField(blank='True', upload_to='images/')
+
     def image_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
 

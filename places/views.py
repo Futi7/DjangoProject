@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 from home.models import Setting
-from places.models import CommentForm, Comment, ImageForm, Images, Places, Category
+from places.models import CommentForm, Comment, ImageForm, Images, Places, Category, Likes
 
 
 def index(request):
@@ -12,7 +12,7 @@ def index(request):
     categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
     places = Places.objects.filter(status='True')
-    count = Places.objects.all().count()
+    count = places.count()
     context = {'places': places, 'categories': categories, 'page': 'prop', 'count': count, 'setting': setting,
                 'lastData': lastData}
     return render(request, 'places.html', context)
@@ -25,6 +25,7 @@ def addcomment(request, id):
         form = CommentForm(request.POST)
         if form.is_valid():
             current_user = request.user
+            place = Places.objects.get(id=id)
 
             data = Comment()
             data.user_id = current_user.id
@@ -34,6 +35,11 @@ def addcomment(request, id):
             data.rate = form.cleaned_data['rate']
             data.ip = request.META.get('REMOTE_ADDR')
             data.save()
+
+            place.comments_count += 1
+            place.save(update_fields=['comments_count'])
+
+
 
             messages.success(request, "Yorumunuz başarıyla gönderilmiştir")
 
@@ -82,3 +88,32 @@ def image_gallery(request, id):
         return render(request, 'image_gallery.html', context)
 
 
+def like_place(request, id):
+    lasturl = request.META.get('HTTP_REFERER')
+    current_user = request.user
+    if request.method == 'POST':
+
+        try:
+            obj = Likes.objects.get(place_id=id, user_id=current_user.id)
+        except Likes.DoesNotExist:
+            obj = None
+
+        place = Places.objects.get(id=id)
+        if obj is None:
+            count = place.likes_count + 1
+            place.likes_count = count
+            place.save(update_fields=['likes_count'])
+            like = Likes()
+            like.place_id = id
+            like.user_id = current_user.id
+            like.save()
+            messages.info(request, 'Başarıyla beğenildi')
+
+        else:
+            obj.delete()
+            count = place.likes_count - 1
+            place.likes_count = count
+            place.save(update_fields=['likes_count'])
+            messages.warning(request, 'Beğeni geri çekildi')
+
+    return HttpResponseRedirect(lasturl)

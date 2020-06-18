@@ -7,15 +7,16 @@ from django.shortcuts import render
 
 from home.forms import SearchForm, SignUpForm
 from home.models import Setting, ContactFormu, ContactFormMessage, UserProfile, FAQ
-from places.models import Places, Category, Images, Comment
+from places.models import Places, Category, Images, Comment, Likes
 
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderData = Places.objects.all()[0:5]
+    sliderData = Places.objects.filter(status='True')[0:5]
     lastData = Places.objects.filter(status='True').order_by('-id')[:3]
+    random_places = Places.objects.filter(status='True').order_by('?')
     categories = Category.objects.all()
-    context = {'setting': setting, 'page': 'home', 'sliderData': sliderData, 'categories': categories, 'lastData':lastData}
+    context = {'setting': setting, 'page': 'home','random_places':random_places, 'sliderData': sliderData, 'categories': categories, 'lastData':lastData}
 
     return render(request, 'index.html', context)
 
@@ -68,7 +69,7 @@ def category_places(request, id, slug):
     categoriesData = Category.objects.get(pk=id)
     setting = Setting.objects.get(pk=1)
     places = Places.objects.filter(category_id=id, status='True')
-    count = Places.objects.filter(category_id=id).count()
+    count = places.count()
     context = {'places': places, 'categories':categories,'page': 'prop', 'count':count,'setting': setting, 'catData':categoriesData, 'lastData':lastData}
     return render(request, 'places.html', context)
 
@@ -94,7 +95,7 @@ def faq(request):
     setting = Setting.objects.get(pk=1)
     categories = Category.objects.all()
     faq = FAQ.objects.all().order_by('ordernumber')
-    context = {'categories':categories, 'setting': setting, 'faq': faq, 'page': 'contact', 'lastData':lastData}
+    context = {'categories':categories, 'setting': setting, 'faq': faq, 'page': 'faq', 'lastData':lastData}
     return render(request, 'faq.html', context)
 
 
@@ -111,9 +112,9 @@ def place_search(request):
             query = form.cleaned_data['query']
             catid = form.cleaned_data['catid']
             if catid == 0:
-                places = Places.objects.filter(title__icontains=query)
+                places = Places.objects.filter(title__icontains=query, status=True)
             else:
-                places = Places.objects.filter(title__icontains=query, category_id=catid)
+                places = Places.objects.filter(title__icontains=query, category_id=catid, status=True)
             count = places.count()
             context = {'places': places, 'categories': categories, 'page': 'prop', 'count': count, 'setting': setting,
                         'lastData': lastData}
@@ -126,7 +127,7 @@ def place_search(request):
 def place_search_auto(request):
     if request.is_ajax():
         q = request.GET.get('term', '')
-        place = Places.objects.filter(title__icontains=q)
+        place = Places.objects.filter(title__icontains=q, status=True)
         results = []
         for rs in place:
             place_json = {}
@@ -141,15 +142,27 @@ def place_search_auto(request):
 
 
 def place_detail(request, id, slug):
+    lasturl = request.META.get('HTTP_REFERER')
+    place = Places.objects.get(pk=id)
+    current_user = request.user
+    if place.status == 'False' and place.user_id != current_user.id:
+        return HttpResponseRedirect(lasturl)
+
     lastData = Places.objects.filter(status='True').order_by('-id')[:3]
     categories = Category.objects.all()
     comments = Comment.objects.filter(place_id=id, status ='True')
+
+    if Likes.objects.filter(place_id=id, user_id=current_user.id).exists():
+        obj = True
+    else:
+        obj = False
+
+
     setting = Setting.objects.get(pk=1)
     images = Images.objects.filter(place_id=id)
-    place = Places.objects.get(pk=id)
     profile = UserProfile.objects.get(user=place.user)
     keywords = place.keywords.split(',')
-    context = {'place': place, 'categories':categories,'page': 'prop',  'lastData':lastData,'setting': setting, 'keywords':keywords, 'images':images,'profile':profile, 'comments':comments}
+    context = {'place': place, 'categories':categories,'page': 'prop',  'lastData':lastData,'setting': setting, 'keywords':keywords, 'images':images, 'profile':profile, 'liked':obj, 'comments':comments}
     return render(request, 'place.html', context)
 
 

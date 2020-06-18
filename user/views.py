@@ -123,6 +123,7 @@ def user_new_place(request):
     places = Places.objects.filter(user_id=current_user.id)
     categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
+    page_title = "Add New Place"
     if request.method == 'POST':
         form = PlacesForm(request.POST, request.FILES)
         if form.is_valid():
@@ -140,18 +141,18 @@ def user_new_place(request):
             data.audience = form.cleaned_data['audience']
             data.category = form.cleaned_data['category']
             data.slug = form.cleaned_data['slug']
-            data.detail = form.cleaned_data['details']
+            data.details = form.cleaned_data['details']
             data.status = 'False'
             data.save()
             messages.success(request, 'Place add succesfully registered.')
-            return HttpResponseRedirect('/user/placess')
+            return HttpResponseRedirect('/user/places/')
         else:
             messages.success(request, 'Content Form Error :' + str(form.errors))
             return HttpResponseRedirect('/user/user_new_place')
     else:
         category = Category.objects.all()
         form = PlacesForm()
-        context = {'category': category, 'form': form, 'setting': setting, 'page': 'user', 'categories': categories, 'lastData': lastData, 'places':places, 'profile': profile}
+        context = {'category': category, 'form': form, 'setting': setting, 'page': 'user', 'categories': categories, 'lastData': lastData, 'places':places, 'profile': profile,'page_title':page_title}
         return render(request, 'user_new_place.html', context)
 
 
@@ -164,6 +165,7 @@ def user_edit_place(request, id):
     place = Places.objects.get(id=id)
     categories = Category.objects.all()
     setting = Setting.objects.get(pk=1)
+    page_title = "Edit Place: "+ place.title
     if request.method == 'POST':
         form = PlacesForm(request.POST, request.FILES, instance=place)
         if form.is_valid():
@@ -177,7 +179,7 @@ def user_edit_place(request, id):
         category = Category.objects.all()
         form = PlacesForm(instance=place)
         context = {'category': category, 'form': form, 'setting': setting, 'page': 'user', 'categories': categories,
-                   'lastData': lastData, 'places': places, 'profile': profile}
+                   'lastData': lastData, 'places': places, 'profile': profile, 'page_title':page_title}
 
 
     return render(request, 'user_new_place.html', context)

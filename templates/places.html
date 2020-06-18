@@ -26,12 +26,12 @@
 					<div class="property">
 						<div class="property_image">
 							<img src="/uploads/{{ prod.image }}" alt="">
-							<div class="tag_featured property_tag"><a href="#">{{ prod.status }}</a></div>
+							<div class="tag_featured property_tag"><a href="#"><i class="fa fa-thumbs-up"></i> : {{ prod.likes_count }}    <i class="fa fa-comment"></i> : {{ prod.comments_count }} </a></div>
 						</div>
 						<div class="property_body text-center">
 							<div class="property_location">{{ prod.country }}</div>
 							<div class="property_title"><a href="/place/{{ prod.id }}/{{ prod.slug }}">{{ prod.title }}</a></div>
-							<div class="property_price">Giriş Ücreti: {% if prod.price != 0 %}{{ prod.currency }} {{ prod.price }}{% else %} Ücretsiz {% endif %}</div>
+							<div class="property_price">Giriş Ücreti: {% if prod.price != 0 %}{{ prod.currency }} {{ prod.price }}{% else %} Yok {% endif %}</div>
 						</div>
 						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
                             <div><div class="property_icon"><img src="{% static "images/seo-and-web.png" %}" alt=""></div><span>{{ prod.country}}</span></div>

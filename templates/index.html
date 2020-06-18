@@ -138,8 +138,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="section_title">Recent Properties</div>
-					<div class="section_subtitle">Search your dream home</div>
+					<div class="section_title">Random Places</div>
+					<div class="section_subtitle">Search your dream vacation</div>
 				</div>
 			</div>
 			<div class="row recent_row">
@@ -148,14 +148,14 @@
 						<div class="owl-carousel owl-theme recent_slider">
 
 							<!-- Slide -->
-                            {% for slide in sliderData %}
+                            {% for slide in random_places %}
 
 							<div class="owl-item">
 								<div class="recent_item">
 									<div class="recent_item_inner">
 										<div class="recent_item_image">
 											<img src="uploads/{{ slide.image }}" height="261px" width="361px" alt="">
-											<div class="tag_featured property_tag"><a href="#">{{ slide.category }}</a></div>
+                                            <div class="tag_featured property_tag"><a href="#"><i class="fa fa-thumbs-up"></i> : {{ slide.likes_count }}    <i class="fa fa-comment"></i> : {{ slide.comments_count }} </a></div>
 										</div>
 										<div class="recent_item_body text-center">
 											<div class="recent_item_location">{{ slide.country }}</div>
@@ -164,7 +164,7 @@
 										</div>
 										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
 											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/seo-and-web.png" %}" alt=""></div><span>{{ slide.country}}</span></div>
-											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/clock-circular-outline.png" %}" alt=""></div><span>{{ slide.audience }}</span></div>
+											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/clock-circular-outline.png" %}" alt=""></div><span>{{ slide.visit_hours }}</span></div>
 											<div><div class="recent_icon"><img style="margin-top:-4px" src="{% static "images/business.png" %}" alt=""></div><span>{{ slide.audience }}</span></div>
 										</div>
 									</div>
@@ -206,7 +206,7 @@
 			<div class="city">
 				<img src="/uploads/{{ cat.image }}" height="217px" width="292px" alt="https://unsplash.com/@dnevozhai">
 				<div class="city_overlay">
-					<a href="/category/{{ cat.id }}/{{ cat.slug }}" class="d-flex flex-column align-items-center justify-content-center">
+					<a href="/category_all/{{ cat.id }}/{{ cat.slug }}" class="d-flex flex-column align-items-center justify-content-center">
 						<div class="city_title">{{ cat.title }}</div>
 						<div class="city_subtitle">{{cat.description}}</div>
 					</a>

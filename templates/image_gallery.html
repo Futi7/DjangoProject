@@ -28,13 +28,21 @@
     <div id="image">
         <div class="form-group"></label><input type="text" id="id_title" name="title" maxlength="150" placeholder="Title" class="form-control"></div>
         <div class="form-group"><label for="id_image" class="required">Place Main Image</label>
-            <div class="custom-file"><input type="file" id="id_image" name="image" required="required" placeholder="Image" class="custom-file-input">
+            <div class="custom-file"><input type="file" name="image" class="form-control valid" placeholder="Image" accept="image/*" id="id_image">
             </div>
         </div>
     </div>
     <button class="btn btn-primary" type="submit">Save</button>
 </form>
-
+<br><br>
+ {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+<br><br>
 <table class="table">
     <thead>
     <tr>

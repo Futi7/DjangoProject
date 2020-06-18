@@ -1,5 +1,5 @@
 {% extends 'homebase.html' %}
-{% block title %} Add New Place {% endblock %}
+{% block title %}{{ page_title }} {% endblock %}
 {% block keywords %} {{ setting.keywords }} {% endblock %}
 {% block description %} {{ setting.description }} {% endblock %}
 
@@ -40,7 +40,7 @@
                         </form>
 
 
-    <a href="">back to list</a>
+    <a href="/user/places">back to list</a>
             </div>
         </div>
     </div>

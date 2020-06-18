@@ -27,7 +27,7 @@
                                                     class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                            <a class="nav-link" href="/aboutus">About</a>
                                         </li>
 
                                         <li class="nav-item dropdown">
@@ -67,7 +67,9 @@
                                             <a class="nav-link" href="/contact">Contact Us</a>
                                         </li>
 
-
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/faq">FAQ</a>
+                                        </li>
 
                                         {% if user.id is not None %}
 
@@ -100,7 +102,7 @@
                                                     class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                            <a class="nav-link" href="/aboutus">About</a>
                                         </li>
 
 
@@ -141,7 +143,9 @@
                                             <a class="nav-link" href="/contact">Contact Us</a>
                                         </li>
 
-
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/faq">FAQ</a>
+                                        </li>
 
 
                                         {% if user.id is not None %}
@@ -176,7 +180,7 @@
                                                     class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                            <a class="nav-link" href="/aboutus">About</a>
                                         </li>
 
 
@@ -218,7 +222,90 @@
                                         </li>
 
 
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/faq">FAQ</a>
+                                        </li>
 
+
+                                        {% if user.id is not None %}
+
+                                            <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle"
+                                                                              href="/user/"><i style="color: #fff"
+                                                                                               class="fa fa-user"></i> {{ user.first_name }}
+                                            </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li>
+                                                        <a class="dropdown-item" href="/user/comments">Comments</a>
+                                                        <a class="dropdown-item" href="/user/places">My Places</a>
+                                                        <a class="dropdown-item" href="/logout/">Log Out</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>{% else %}
+                                            <li class="nav-item"><a class="nav-link" href="/login/"><i
+                                                    style="color: #fff" class="fa fa-sign-in-alt"></i> Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="/signup/"><i
+                                                    style="color: #fff" class="fa fa-sign-out-alt"></i> Sign Up</a></li>
+                                        {% endif %}
+
+
+
+
+
+
+
+
+                                        {% elif page == 'faq' %}
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="/">Home <span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/aboutus">About</a>
+                                        </li>
+
+
+                                        <li class="nav-item dropdown">
+                                           <a class="nav-link dropdown-toggle" role="button" href="/places"
+                                               id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                                                Places
+                                            </a>
+                                            {% load mptt_tags %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                {% recursetree categories %}
+                                                    <li>
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <a class="dropdown-item dropdown-toggle"  onclick="window.location='/category_all/{{ node.id }}/{{ node.slug }}'"
+                                                              href="/category_all/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% else %}
+                                                            <a class="dropdown-item"
+                                                               href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                                        {% endif %}
+
+                                                        {% if not node.is_leaf_node %}
+                                                            <ul class="dropdown-menu">
+                                                                {{ children }}
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/references">References</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
+
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/faq">FAQ</a>
+                                        </li>
 
 
                                         {% if user.id is not None %}
@@ -253,7 +340,7 @@
                                                     class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                            <a class="nav-link" href="/aboutus">About</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle active" role="button" href="/places"
@@ -292,6 +379,10 @@
                                             <a class="nav-link" href="/contact">Contact Us</a>
                                         </li>
 
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/faq">FAQ</a>
+                                        </li>
+
 
                                         {% if user.id is not None %}
 
@@ -326,7 +417,7 @@
                                                     class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                            <a class="nav-link" href="/aboutus">About</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" role="button" href="/places"
@@ -365,6 +456,10 @@
                                             <a class="nav-link" href="/contact">Contact Us</a>
                                         </li>
 
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/faq">FAQ</a>
+                                        </li>
+
                                         {% if user.id is not None %}
 
 
@@ -400,7 +495,7 @@
                                                     class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus">About Us</a>
+                                            <a class="nav-link" href="/aboutus">About</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" role="button" href="/places"
@@ -437,6 +532,11 @@
 
                                         <li class="nav-item">
                                             <a class="nav-link" href="/contact">Contact Us</a>
+                                        </li>
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/faq">FAQ</a>
                                         </li>
 
 

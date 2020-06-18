@@ -138,6 +138,14 @@
                                     </div>
                                 </div>
 
+                                <div class="property_room">
+                                    <div class="property_room_title">Likes</div>
+                                    <div class="property_room_content d-flex flex-row align-items-center justify-content-start">
+                                        <div class="room_icon"><i  class="fa fa-2x fa-thumbs-up" style="color:#ccd9f2;!important;"></i></div>
+                                        <div class="room_num">{{ place.likes_count }}</div>
+                                    </div>
+                                </div>
+
 
                             </div>
                         </div>
@@ -182,7 +190,30 @@
             <div class="row" style="margin-top: 10px">
                 <div class="col-md-12">
                     <div class="additional_details">
-                        <div class="property_title">Comments</div>
+                    <div class="row">
+                        <div class="col-md-4"> <div class="property_title">Comments</div></div>
+                        <div class="col-md-6"></div>
+                        <div class="col-md-2">
+                            <form action="/places/like_place/{{ place.id }}" method="post">
+                                {% csrf_token %}
+
+                            {% if not liked %}
+                            <button class="contact_button button"
+                                                    style="margin-top:0px;!important;border-radius:200px;height: 86px;!important;width: 86px;!important;background: linear-gradient(to right, #487fee, #32fa95);!important"
+                                                    type="submit">
+                                <i width="32px" class="fa fa-3x fa-thumbs-up"></i></button>
+
+
+                            {% else %}
+                                <button class="contact_button button"
+                                                    style="margin-top:0px;!important;border-radius:200px;height: 86px;!important;width: 86px;!important;background: linear-gradient(to right, #ff0000, #b4c13b);!important"
+                                                    type="submit">
+                                <i width="64pxpx" class="fa fa-3x fa-thumbs-down"></i></button>
+                              {% endif %}
+                            </form>
+                        </div>
+
+                    </div>
                         <div class="details_container">
                             {% if user.id is not None %}
                                 <form name="comment" action="/places/addcomment/{{ place.id }}" method="post"

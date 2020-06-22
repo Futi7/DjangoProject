@@ -2,65 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d6ed4a9-7865-4007-8316-0b11c589aa73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/places/migrations/0015_auto_20200618_0948.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/places/migrations/0016_auto_20200618_1230.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/places/migrations/0017_auto_20200618_1247.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/0.-Bangkok-Grand-Palace-travel-tips.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/07c7d322316697e916aa7b9438e48a12.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/180122miniaturkjpg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/180122miniaturkjpg_tiSR1WI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/234.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/5e4b8db9d3806c18fcd338b2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/800x420-mevlananin-huzur-dolu-sehri-konya-1535351814317.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Bahamas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Iceland-Volcano.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/KATMANDU-GEZI-REHBERI-MISTIK-NEPAL-REV.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Maldivler-23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/agra-tac-mahal-1155x675.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/agra-tac-mahal-1155x675_m6rYvEx.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/agra-tac-mahal-1155x675_wYr21lD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_1_DsHTmv7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_1_aYvgnNK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_1_rQcmWC1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_1_wVVpdxS.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_2_EoqBnJB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_2_QkO59IO.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_2_pRtyLms.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_3_AYcUgLY.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_3_Hg1Ea00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_8rgBZ1o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_HvzY6lb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_ImVkHH2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_LhOv2Sr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_Pg3Ub0H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_hzmQOL5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/grand-palace-bangkok-boyutlu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/hd-wallpapers-mount-everest-blue-skies-desktop-background-mt-wallpaper-1920x1200-_RMyDD3O.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/images_WDycktA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/maldivler-turu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/maxresdefault.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/salda-golu-tabiat-parki.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/tac-mahal-hindistan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/tac-mahal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/taj-mahal-agra.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/wp-image-1645411460.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/image_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/image_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/place.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/place.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/places.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/places.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user_new_place.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_new_place.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user_places.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_places.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +80,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -248,7 +193,8 @@
       <workItem from="1591979631859" duration="10276000" />
       <workItem from="1592316670779" duration="5696000" />
       <workItem from="1592389331633" duration="6387000" />
-      <workItem from="1592462124651" duration="16224000" />
+      <workItem from="1592462124651" duration="17260000" />
+      <workItem from="1592850852065" duration="2145000" />
     </task>
     <task id="LOCAL-00001" summary="End of the 2nd video">
       <created>1585407372071</created>
@@ -390,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592462462415</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added extras">
+      <created>1592481578256</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1592481578265</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,6 +380,7 @@
     <MESSAGE value="End of the 31st video" />
     <MESSAGE value="Added user cms, user profile management, fixed parent category page bug." />
     <MESSAGE value="Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes" />
+    <MESSAGE value="Added extras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added extras" />
   </component>
 </project>
